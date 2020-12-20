@@ -1,0 +1,359 @@
+<!--
+    https://flatuicolors.com/palette/ru
+    https://roadmap.sh/backend
+-->
+<div class="wrapper" id="svgroadmap">
+    <div class="svg-container">
+        <svg version="1.1" viewBox="0 0 500 700" preserveAspectRatio="xMinYMin meet" class="svg-content">
+
+            <defs>
+                <rect id="myRectCourse" fill="#66cc00" x="0" y="0" ry="3" rx="3" width="130" height="20"
+                    class="roadmap-course" />
+
+                <rect id="myRectPractice" fill="#66cc00" x="0" y="0" ry="3" rx="3" width="130" height="20"
+                    class="roadmap-practice" />
+
+                <g id="myQuizz">
+                    <circle fill="#66cc00" cx="65" cy="0" r="20" class="roadmap-quizz" />
+                    <text x="65" y="0" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7"
+                        font-weight="900" style="text-transform:uppercase; letter-spacing: 1px"
+                        dominant-baseline="middle" alignment-baseline="middle" text-anchor="middle">Quizz
+                    </text>
+                </g>
+
+                <line id="myLeftArrow" x1="0" x2="-65" y1="10" y2="10" stroke-width="2" stroke="#443c3d"
+                    stroke-dasharray="2,1" />
+
+                <line id="myRightArrow" x1="130" x2="195" y1="10" y2="10" stroke-width="2" stroke="#443c3d"
+                    stroke-dasharray="2,1" />
+
+                <line id="myLongArrowDown" x1="65" x2="65" y1="20" y2="100" stroke-width="2" stroke="#443c3d"
+                    stroke-dasharray="2,1" />
+
+                <line id="myMediumArrowDown" x1="65" x2="65" y1="20" y2="60" stroke-width="2" stroke="#443c3d"
+                    stroke-dasharray="2,1" />
+
+                <line id="mySmallArrowDown" x1="65" x2="65" y1="20" y2="40" stroke-width="2" stroke="#443c3d"
+                    stroke-dasharray="2,1" />
+
+                <g id="myFurtherArrow">
+                    <line x1="65" x2="65" y1="20" y2="60" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+                    <polygon points="60 60, 70 60, 65 75" />
+                </g>
+            </defs>
+
+            <!-- Start of the roadmap -->
+
+            <g transform="translate(180, 0)">
+                <a xlink:href="/posts/introduction">
+                    <use xlink:href="#myRectCourse" />
+                    <text x="65" y="10" class="roadmap-text">Introduction</text>
+                </a>
+                <use xlink:href="#myLeftArrow" />
+                <use xlink:href="#myLongArrowDown" />
+            </g>
+
+            <g transform="translate(0, 0)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10">Python Review</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+
+            <g transform="translate(0, 60)">
+                <a xlink:href="">
+                    <use xlink:href="#myQuizz" />
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+
+            <g transform="translate(0, 100)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10">Math Review</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+
+            <g transform="translate(0, 160)">
+                <a xlink:href="">
+                    <use xlink:href="#myQuizz" />
+                </a>
+            </g>
+
+
+            <g transform="translate(180, 100)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectCourse" />
+                    <text x="65" y="10" class="roadmap-text">Neural Networks</text>
+                </a>
+                <use xlink:href="#myRightArrow" />
+                <use xlink:href="#myLongArrowDown" />
+            </g>
+
+            <g transform="translate(360, 100)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10" class="roadmap-text">Backpropagation</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(360, 140)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10" class="roadmap-text">Autograd</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(360, 200)">
+                <a xlink:href="">
+                    <use xlink:href="#myQuizz" />
+                </a>
+            </g>
+
+
+            <g transform="translate(180, 200)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectCourse" />
+                    <text x="65" y="10" class="roadmap-text">Images</text>
+                </a>
+                <use xlink:href="#myLeftArrow" />
+                <use xlink:href="#myLongArrowDown" />
+            </g>
+            <g transform="translate(0, 200)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10" class="roadmap-text">Convolutions</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(0, 240)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10" class="roadmap-text">ConvNets</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(0, 280)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10" class="roadmap-text">Transfer Learning</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(0, 340)">
+                <a xlink:href="">
+                    <use xlink:href="#myQuizz" />
+                </a>
+            </g>
+
+
+            <g transform="translate(180, 300)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectCourse" />
+                    <text x="65" y="10" class="roadmap-text">Multiple Objects</text>
+                </a>
+                <use xlink:href="#myRightArrow" />
+                <use xlink:href="#myLongArrowDown" />
+            </g>
+            <g transform="translate(360, 300)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10" class="roadmap-text">Multi-labels</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(360, 340)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10" class="roadmap-text">Localization</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(360, 380)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectPractice" />
+                    <text x="65" y="10" class="roadmap-text">Segmentation</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(360, 440)">
+                <a xlink:href="">
+                    <use xlink:href="#myQuizz" />
+                </a>
+            </g>
+
+            <g transform="translate(180, 400)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectCourse" />
+                    <text x="65" y="10" class="roadmap-text">Tricks</text>
+                </a>
+                <use xlink:href="#myLongArrowDown" />
+            </g>
+
+
+            <g transform="translate(180, 500)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectCourse" />
+                    <text x="65" y="10" class="roadmap-text">Few-Shots</text>
+                </a>
+                <use xlink:href="#myLongArrowDown" />
+            </g>
+
+
+            <g transform="translate(180, 600)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectCourse" />
+                    <text x="65" y="10" class="roadmap-text">Generative</text>
+                </a>
+                <use xlink:href="#myFurtherArrow" />
+            </g>
+
+
+
+        </svg>
+    </div>
+</div>
+
+
+<script>
+    let wrapper = document.getElementById("svgroadmap");
+    let textNodes = wrapper.getElementsByTagName("text");
+
+    for (let i = 0; i < textNodes.length; i++) {
+        textNodes[i].setAttribute("dominant-baseline", "middle");
+        textNodes[i].setAttribute("alignment-baseline", "middle");
+        textNodes[i].setAttribute("text-anchor", "middle");
+        textNodes[i].setAttribute("font-size", "10");
+        textNodes[i].setAttribute("font-weight", "900");
+        textNodes[i].setAttribute("stroke", "none");
+    }
+</script>
+
+<style>
+    .wrapper {
+        padding: 0px 0px;
+        --max-width: 1000px;
+        min-height: 1150px;
+    }
+
+    .wrapper text {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: "Open Sans Condensed";
+
+        fill: #f5f3e7;
+    }
+
+    .roadmap-course,
+    .roadmap-quizz,
+    .roadmap-practice {
+        -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
+    }
+
+    .roadmap-course {
+        fill: #f5cd79;
+        color: #f5f5f5
+    }
+
+    .roadmap-quizz {
+        fill: #e15f41;
+        color: #f5f5f5
+    }
+
+    .roadmap-practice {
+        fill: #f19066;
+        color: #f5f5f5
+    }
+
+    #svgroadmap a:hover {
+        stroke: rgba(0, 0, 0, 0.88);
+        stroke-width: 1px;
+    }
+
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        vertical-align: middle;
+        overflow: visible;
+    }
+
+    .svg-content {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #svgroadmap line:not(.dark) {
+        stroke: rgba(0, 0, 0, 0.88);
+    }
+
+    #svgroadmap line.dark {
+        stroke: blue;
+    }
+
+    #svgroadmap rect.dark {
+        fill: white;
+    }
+</style>
+
+
+
+{{- /* theme-toggle is enabled */}}
+{{- if (not .Site.Params.disableThemeToggle) }}
+{{- /* theme is light */}}
+{{- if (eq .Site.Params.defaultTheme "light") }}
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        let rects = document.getElementById("svgroadmap").getElementsByTagName("rect");
+        for (let i = 0; i < rects.length; i++) {
+            rects[i].classList.add('dark');
+        }
+    }
+</script>
+{{- /* theme is dark */}}
+{{- else if (eq .Site.Params.defaultTheme "dark") }}
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        let rects = document.getElementById("svgroadmap").getElementsByTagName("rect");
+        for (let i = 0; i < rects.length; i++) {
+            rects[i].classList.remove('dark');
+        }
+    }
+</script>
+{{- else }}
+{{- /* theme is auto */}}
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        let rects = document.getElementById("svgroadmap").getElementsByTagName("rect");
+        for (let i = 0; i < rects.length; i++) {
+            rects[i].classList.add('dark');
+        }
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        let rects = document.getElementById("svgroadmap").getElementsByTagName("rect");
+        for (let i = 0; i < rects.length; i++) {
+            rects[i].classList.remove('dark');
+        }
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        let rects = document.getElementById("svgroadmap").getElementsByTagName("rect");
+        for (let i = 0; i < rects.length; i++) {
+            rects[i].classList.add('dark');
+        }
+    }
+
+</script>
+{{- end }}
+{{- /* theme-toggle is disabled and theme is auto */}}
+{{- else if (and (ne .Site.Params.defaultTheme "light") (ne .Site.Params.defaultTheme "dark"))}}
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+{{- end }}
