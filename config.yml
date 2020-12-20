@@ -1,4 +1,4 @@
-baseURL: "https://arthurdouillard.com"
+baseURL: "https://arthurdouillard.com/"
 title: DeepCourse
 paginate: 8
 theme: hugo-PaperMod
