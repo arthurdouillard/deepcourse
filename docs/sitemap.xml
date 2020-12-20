@@ -3,49 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://arthurdouillard.com/</loc>
+    <loc>/</loc>
     <lastmod>1970-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://arthurdouillard.com/tags/deeplearning/</loc>
+    <loc>/tags/deeplearning/</loc>
     <lastmod>1970-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://arthurdouillard.com/posts/introduction/</loc>
+    <loc>/posts/introduction/</loc>
     <lastmod>1970-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://arthurdouillard.com/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>1970-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://arthurdouillard.com/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>1970-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://arthurdouillard.com/tags/vision/</loc>
+    <loc>/tags/vision/</loc>
     <lastmod>1970-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://arthurdouillard.com/about/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>https://arthurdouillard.com/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://arthurdouillard.com/search/</loc>
+    <loc>/search/</loc>
   </url>
   
   <url>
-    <loc>https://arthurdouillard.com/series/</loc>
+    <loc>/series/</loc>
   </url>
   
 </urlset>

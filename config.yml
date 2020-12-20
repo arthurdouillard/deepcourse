@@ -1,4 +1,6 @@
-baseURL: "https://arthurdouillard.com/"
+#baseURL: "https://arthurdouillard.github.io/"
+relativeURLs: true
+
 title: DeepCourse
 paginate: 8
 theme: hugo-PaperMod

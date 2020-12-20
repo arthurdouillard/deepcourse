@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on DeepCourse</title>
-    <link>https://arthurdouillard.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on DeepCourse</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate><atom:link href="https://arthurdouillard.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>deeplearning</title>
-      <link>https://arthurdouillard.com/tags/deeplearning/</link>
+      <link>/tags/deeplearning/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
       
-      <guid>https://arthurdouillard.com/tags/deeplearning/</guid>
+      <guid>/tags/deeplearning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vision</title>
-      <link>https://arthurdouillard.com/tags/vision/</link>
+      <link>/tags/vision/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
       
-      <guid>https://arthurdouillard.com/tags/vision/</guid>
+      <guid>/tags/vision/</guid>
       <description></description>
     </item>
     
