@@ -5,6 +5,9 @@ theme: hugo-PaperMod
 enableInlineShortcodes: true
 enableRobotsTXT: true
 
+
+publishDir: docs
+
 # googleAnalytics: UA-123-45
 
 minify:
