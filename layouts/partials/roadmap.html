@@ -13,39 +13,41 @@
                 <rect id="myRectPractice" fill="#66cc00" x="0" y="0" ry="3" rx="3" width="130" height="20"
                     class="roadmap-practice" />
 
-                <g id="myQuizz">
-                    <circle fill="#66cc00" cx="65" cy="0" r="20" class="roadmap-quizz" />
+                <g id="myQuizz" class="roadmap-quizz">
+                    <circle cx="65" cy="0" r="20" class="roadmap-quizz-circle" />
                     <text x="65" y="0" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7"
                         font-weight="900" style="text-transform:uppercase; letter-spacing: 1px"
-                        dominant-baseline="middle" alignment-baseline="middle" text-anchor="middle">Quizz
+                        dominant-baseline="middle" alignment-baseline="middle" text-anchor="middle"
+                        class="roadmap-quizz-text">Quiz
                     </text>
                 </g>
 
-                <line id="myLeftArrow" x1="0" x2="-65" y1="10" y2="10" stroke-width="2" stroke="#443c3d"
-                    stroke-dasharray="2,1" />
+                <line class="roadmap-line" id="myLeftArrow" x1="0" x2="-65" y1="10" y2="10" stroke-width="2"
+                    stroke="#443c3d" stroke-dasharray="2,1" />
 
-                <line id="myRightArrow" x1="130" x2="195" y1="10" y2="10" stroke-width="2" stroke="#443c3d"
-                    stroke-dasharray="2,1" />
+                <line class="roadmap-line" id="myRightArrow" x1="130" x2="195" y1="10" y2="10" stroke-width="2"
+                    stroke="#443c3d" stroke-dasharray="2,1" />
 
-                <line id="myLongArrowDown" x1="65" x2="65" y1="20" y2="100" stroke-width="2" stroke="#443c3d"
-                    stroke-dasharray="2,1" />
+                <line class="roadmap-line" id="myLongArrowDown" x1="65" x2="65" y1="20" y2="100" stroke-width="2"
+                    stroke="#443c3d" />
 
-                <line id="myMediumArrowDown" x1="65" x2="65" y1="20" y2="60" stroke-width="2" stroke="#443c3d"
-                    stroke-dasharray="2,1" />
+                <line class="roadmap-line" id="myMediumArrowDown" x1="65" x2="65" y1="20" y2="60" stroke-width="2"
+                    stroke="#443c3d" stroke-dasharray="2,1" />
 
-                <line id="mySmallArrowDown" x1="65" x2="65" y1="20" y2="40" stroke-width="2" stroke="#443c3d"
-                    stroke-dasharray="2,1" />
+                <line class="roadmap-line" id="mySmallArrowDown" x1="65" x2="65" y1="20" y2="40" stroke-width="2"
+                    stroke="#443c3d" stroke-dasharray="2,1" />
 
                 <g id="myFurtherArrow">
-                    <line x1="65" x2="65" y1="20" y2="60" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
-                    <polygon points="60 60, 70 60, 65 75" />
+                    <line class="roadmap-line" x1="65" x2="65" y1="20" y2="60" stroke-width="2" stroke="#443c3d"
+                        stroke-dasharray="2,1" />
+                    <polygon class="roadmap-line" stroke-width="2" stroke="#443c3d" points="60 60, 70 60, 65 75" />
                 </g>
             </defs>
 
             <!-- Start of the roadmap -->
 
             <g transform="translate(180, 0)">
-                <a xlink:href="/posts/introduction">
+                <a xlink:href="/introduction">
                     <use xlink:href="#myRectCourse" />
                     <text x="65" y="10" class="roadmap-text">Introduction</text>
                 </a>
@@ -247,7 +249,6 @@
     }
 
     .roadmap-course,
-    .roadmap-quizz,
     .roadmap-practice {
         -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
         filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
@@ -258,7 +259,27 @@
         color: #f5f5f5
     }
 
-    .roadmap-quizz {
+    .roadmap-quizz-circle {
+        stroke: #e15f41;
+        fill: none;
+    }
+
+    .roadmap-quizz:hover .roadmap-quizz-circle {
+        stroke: none;
+        fill: #e15f41;
+    }
+
+    .roadmap-quizz-text {
+        stroke: none;
+        fill: #e15f41;
+    }
+
+    .roadmap-quizz:hover .roadmap-quizz-text {
+        stroke: none;
+        fill: #f5f5f5;
+    }
+
+    .roadmap-quizz:hover {
         fill: #e15f41;
         color: #f5f5f5
     }
@@ -266,6 +287,12 @@
     .roadmap-practice {
         fill: #f19066;
         color: #f5f5f5
+    }
+
+    .roadmap-line {}
+
+    .roadmap-line {
+        stroke: rgba(0, 0, 0, 0.6);
     }
 
     #svgroadmap a:hover {
@@ -295,10 +322,6 @@
 
     #svgroadmap line.dark {
         stroke: blue;
-    }
-
-    #svgroadmap rect.dark {
-        fill: white;
     }
 </style>
 
@@ -357,3 +380,24 @@
 
 </script>
 {{- end }}
+
+
+<script>
+    let switchColor = function (className) {
+        let elts = document.getElementsByClassName(className);
+        for (let i = 0; i < elts.length; i++) {
+            if (elts[i].classList.contains("dark")) {
+                elts[i].classList.remove("dark");
+            } else {
+                elts[i].classList.add("dark");
+            }
+        }
+    };
+
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        switchColor("roadmap-course");
+        switchColor("roadmap-practice");
+        switchColor("roadmap-quizz");
+        switchColor("roadmap-line");
+    })
+</script>

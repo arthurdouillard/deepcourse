@@ -1,0 +1,18 @@
+a:hover {
+    text-decoration: none;
+    color: inherit;
+} /* To avoid the styling of bootstrap */
+
+
+.github-link {
+    width: 20px;
+    height: 20px
+}
+
+.mysvg text {
+    font-family: Arial;
+}
+
+.mysvg {
+    text-align: center;
+}

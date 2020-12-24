@@ -1,0 +1,32 @@
+<div class="row ankiapp" id="ankiapp-{{ .Get "quizid" }}">
+    <div class="col-md-3 card-button previous-button" id="previous-button-{{ .Get "quizid" }}" style="visibility: hidden">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+    <div class="col-md-6 anki" id="anki-{{ .Get "quizid" }}">
+        <div id="card-{{ .Get "quizid" }}">
+            <div class="card-front" id="card-front-{{ .Get "quizid" }}"></div>
+            <p class="card-helper" id="card-helper-{{ .Get "quizid" }}">Click to reveal answer</p>
+            <div class="card-global-back" id="card-global-back-{{ .Get "quizid" }}">
+                <div class="card-back" id="card-back-{{ .Get "quizid" }}"></div>
+                <div class="card-details1" id="card-details1-{{ .Get "quizid" }}"></div>
+                <div class="card-details2" id="card-details2-{{ .Get "quizid" }}"></div>
+                <div class="card-image" id="card-image-{{ .Get "quizid" }}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 offset-md-1 card-button after-button" id="after-button-{{ .Get "quizid" }}" style="visibility: hidden">
+        <i class="fas fa-arrow-right"></i>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        launchQuiz(
+            "Introduction to Deep Learning",
+            eval({{ .Get "cards" }}),
+            false,
+            {{ .Get "quizid" }},
+            false
+        );
+    });
+</script>

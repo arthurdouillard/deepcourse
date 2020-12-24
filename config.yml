@@ -38,7 +38,8 @@ params:
     author: Arthur Douillard
     # author: ["Me", "You"] # multiple authors
     ShowReadingTime: true
-    defaultTheme: auto
+    defaultTheme: light
+    disableThemeToggle: true
     ShowShareButtons: true
     displayFullLangName: true
     # images: ""
@@ -66,16 +67,16 @@ params:
             - Learn by **coding** without **shortcuts**, and with **space-repetition**.
 
     socialIcons:
-        - name: twitter
-          url: "#"
-        - name: stackoverflow
-          url: "#"
-        - name: codepen
-          url: "#"
-        - name: linkedin
-          url: "#"
-        - name: github
-          url: "https://github.com/adityatelange/hugo-PaperMod"
+    #    - name: twitter
+    #      url: "#"
+    #    - name: stackoverflow
+    #      url: "#"
+    #    - name: codepen
+    #      url: "#"
+    #    - name: linkedin
+    #      url: "#"
+    #    - name: github
+    #      url: "https://github.com/adityatelange/hugo-PaperMod"
 
 taxonomies:
     category: categories

@@ -1,0 +1,3 @@
+<figure class="mysvg">
+    {{ readFile (print "svg/" (index .Params 0)) | safeHTML }}
+</figure>

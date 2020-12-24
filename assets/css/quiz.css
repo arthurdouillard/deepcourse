@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+.anki {
+    background-color: whitesmoke;
+    padding: 10px;
+
+    text-align: center;
+    box-shadow: 2px 2px 8px;
+    border-radius: 5px;
+
+    font-size: 20px;
+
+    height: 80%
+}
+
+.ankiapp {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card-button {
+    cursor: pointer;
+}
+
+#card {
+    cursor: pointer;
+}
+
+.card-front {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.card-helper {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.card-global-back {
+    padding-top: 20px;
+}
+
+.card-details1, #card-details2 {
+    font-style: italic;
+    font-size: 15px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-counter {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card-grade {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#btn-fail {
+    margin-right: 5px;
+}
+#btn-success {
+    margin-left: 5px;
+}
+
+#quizz-title {
+    font-weight: bold;
+}
+
+.quizz-header {
+    margin-top: 10px;
+}
+
+#quizz-info {
+    text-align: right;
+}

@@ -1,0 +1,91 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name=" robots" content="noindex, nofollow">
+{{- end -}}
+<!-- Title -->
+<title>{{ if .IsHome }}{{else}}{{ if .Title }}{{ .Title }} | {{ end }}{{end}}{{ .Site.Title }}</title>
+<!-- Meta -->
+<meta name="keywords" content="{{ if .Params.keywords -}}
+    {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
+    {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
+<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if .IsPage}}
+    {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
+    {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+<meta name="author" content="{{ (partial "author.html" . ) }}">
+<link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}" />
+{{- if .Site.Params.analytics.google.SiteVerificationTag }}
+<meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
+{{- end}}
+<!-- Styles -->
+{{- $common := (resources.Match "css/*.css") | resources.Concat "assets/css/common.css" }}
+{{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
+{{- /*  bundle all required css  */}}
+{{- /*  Add extended css after theme style */ -}}
+{{- $stylesheet := (slice $common $extended) | resources.Concat "assets/css/stylesheet.css" | minify }}
+
+{{- if not .Site.Params.assets.disableFingerprinting }}
+{{- $stylesheet := $stylesheet | fingerprint -}}
+<link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
+    as="style">
+{{- else}}
+<link href="{{ $stylesheet.Permalink }}" rel="preload stylesheet" as="style">
+{{- end}}
+<!-- Search -->
+{{- if (eq .Layout `search`) -}}
+<link rel="preload" as="fetch" href="../index.json" crossOrigin="anonymous">
+{{- $fastsearch := resources.Get "js/fastsearch.js" | resources.ExecuteAsTemplate "js/fastsearch.js" .Site.Params.fuseOpts }}
+{{- $fusejs := resources.Get "js/fuse.js" }}
+{{- if not .Site.Params.assets.disableFingerprinting }}
+{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
+<script defer src="{{ $search.Permalink }}" rel="preload" as="script" onload="loadSearch();"
+    integrity="{{ $search.Data.Integrity }}">
+</script>
+{{- else}}
+{{ $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
+<script defer src="{{ $search.Permalink }}" rel="preload" as="script" onload="loadSearch();"></script>
+{{- end}}
+{{- end -}}
+
+{{- $highlightjs := resources.Get "js/highlight.min.js" }}
+{{- $quizjs := resources.Get "js/quiz.js" }}
+{{- $miscjs := resources.Get "js/misc.js" }}
+{{ $additionaljs := (slice $highlightjs $quizjs $miscjs) | resources.Concat "assets/js/addon.js" | minify }}
+<script defer src="{{ $additionaljs.Permalink }}" as="script"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+<!-- Favicons -->
+<link rel="icon" href="{{- .Site.Params.assets.favicon | default "favicon.ico" | absURL -}}">
+<link rel="icon" type="image/png" sizes="16x16" href="
+    {{- .Site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL -}}">
+<link rel="icon" type="image/png" sizes="32x32" href="
+    {{- .Site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL -}}">
+<link rel="apple-touch-icon" href="
+    {{- .Site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL -}}">
+<link rel="mask-icon" href="{{- .Site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL -}}">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<!-- Generator -->
+{{- hugo.Generator }}
+<!-- RSS -->
+{{- range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}
+{{- range .Translations -}}
+<link rel="alternate" hreflang="{{- .Lang -}}" href="{{- .Permalink -}}" />
+{{ end }}
+{{- partial "extend_head.html" . -}}
+<!-- Misc -->
+{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+{{- template "_internal/google_analytics_async.html" . }}
+{{- template "_internal/google_news.html" . }}
+{{- template "partials/templates/opengraph.html" . }}
+{{- template "partials/templates/twitter_cards.html" . }}
+{{- template "partials/templates/schema_json.html" . }}
+{{- end }}

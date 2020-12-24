@@ -5,14 +5,16 @@
     <link>/</link>
     <description>Recent content on DeepCourse</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jun 1956 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Placeholder Text</title>
-      <link>/posts/introduction/</link>
-      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <title>Introduction</title>
+      <link>/introduction/</link>
+      <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
       
-      <guid>/posts/introduction/</guid>
-      <description>Hello</description>
+      <guid>/introduction/</guid>
+      <description>Welcome to this course on Deep Learning for Computer Vision!
+This course will teach you the fundamentals of Deep Learning applied to images. Each topic will be covered under three different type of materials:
+ Lessons, such as this one, accompanied with slides and small quizzes between chapters; Practices, with Google Colab notebooks where we will code actual algorithms; And, quizzes, where you will test your recall on the important notions.</description>
     </item>
     
     <item>
