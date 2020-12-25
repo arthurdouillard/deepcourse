@@ -89,6 +89,8 @@ too uncertain (i.e. 0.47 for a cat image):
 
 ![Example of the loss function](lossfunction.png)
 
+{{< optimg src="lossfunction.png" alt="Example of the loss function" >}}
+
 A small loss means that our model is not that bad, and we shouldn't change too much
 its parameters. On the other hand, a high loss means that we should change a lot of
 parameters in order to improve.

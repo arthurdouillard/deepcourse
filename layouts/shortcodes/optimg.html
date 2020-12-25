@@ -1,0 +1,75 @@
+{{/* get file that matches the filename as specified as src="" in shortcode */}}
+{{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
+
+{{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
+
+{{ $lqipw := default "20x" }}
+{{ $tinyw := default "500x" }}
+{{ $smallw := default "800x" }}
+{{ $mediumw := default "1200x" }}
+{{ $largew := default "1500x" }}
+
+{{/* resize the src image to the given sizes */}}
+
+{{ $lqip := $src.Resize $lqipw }}
+{{ $tiny := $src.Resize $tinyw }}
+{{ $small := $src.Resize $smallw }}
+{{ $medium := $src.Resize $mediumw }}
+{{ $large := $src.Resize $largew }}
+
+{{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
+{{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
+
+{{ $img := imageConfig ($src.RelPermalink | printf "content/%s" ) }}
+
+<div class="img" style="background: url(data:image/jpeg;base64,{{ $lqip.Content | base64Encode  }}); background-size: cover">
+  <svg width="{{ $img.Width }}" height="{{ $img.Height }}" aria-hidden="true"></svg>
+  <img
+    class="lazyload"
+    data-sizes="auto"
+    data-srcset='
+    {{ if ge $src.Width "500" }}
+      {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
+    {{ end }}
+    {{ if ge $src.Width "800" }}
+      {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
+    {{ end }}
+    {{ if ge $src.Width "1200" }}
+      {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
+    {{ end }}
+    {{ if ge $src.Width "1500" }}
+      {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
+    {{ end }}'
+    {{ if .Get (print $medium) }}
+      data-src="{{ $medium.RelPermalink }}"
+    {{ else }}
+      data-src="{{ $src.RelPermalink }}"
+    {{ end }}
+    width="{{ $img.Width }}" height="{{ $img.Height }}"
+    {{ with .Get "alt" }}alt='{{.}}'{{ end }}>
+  <noscript>
+    <img
+      loading="lazy"
+      {{ with .Get "sizes" }}sizes='{{.}}'{{ else }}{{ end }}
+      srcset='
+      {{ if ge $src.Width "500" }}
+        {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
+      {{ end }}
+      {{ if ge $src.Width "800" }}
+        {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
+      {{ end }}
+      {{ if ge $src.Width "1200" }}
+        {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
+      {{ end }}
+      {{ if ge $src.Width "1500" }}
+        {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
+      {{ end }}'
+      {{ if .Get (print $medium) }}
+        src="{{ $medium.RelPermalink }}"
+      {{ else }}
+        src="{{ $src.RelPermalink }}"
+      {{ end }}
+      width="{{ $img.Width }}" height="{{ $img.Height }}"
+      {{ with .Get "alt" }}alt='{{.}}'{{ end }}>
+  </noscript>
+</div>
