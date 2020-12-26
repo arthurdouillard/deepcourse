@@ -43,8 +43,8 @@ params:
     ShowShareButtons: true
     displayFullLangName: true
     # images: ""
-    # assets:
-    #   favicon: '<path / external url>'
+    assets:
+       favicon: '/favicon.ico'
 
     profileMode:
         enabled: false

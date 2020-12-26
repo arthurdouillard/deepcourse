@@ -23,11 +23,8 @@
 <script defer onload="quicklink.listen();" src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.0.0/quicklink.umd.js"></script>
 
 
-<link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="mask-icon" href="safari-pinned-tab.svg">
+<link rel="icon" href="../favicon.ico">
+
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.79.0" />
@@ -53,8 +50,8 @@
   "keywords": [
     "deeplearning", "vision"
   ],
-  "articleBody": "Welcome to this course on Deep Learning for Computer Vision!\nThis course will teach you the fundamentals of Deep Learning applied to images. Each topic will be covered under three different type of materials:\n Lessons, such as this one, accompanied with slides and small quizzes between chapters; Practices, with Google Colab notebooks where we will code actual algorithms; And, quizzes, where you will test your recall on the important notions.  Lessons and practices are essential to learn new materials. However knowledge can be brittle, it’s then best to test it with active recall through quizzes. If you’re really motivated, you can also download the Anki decks I provide for each lessons. Anki is a space-repetition tools to ingrain deeply knowledge in your memory, and to basically never forget it. I’m not kidding, it’s a marvel.\nNo more chitchat, let’s start.\nA Bit Of History In 1956, the summer workshop of Darmouth was held with prestigious participants (Minsky, Shannon, McCarthy, etc.). This event marked the starting point of Artificial Intelligence as a field on its own. The hopes were high: beating a chess champion, prove math theorems, replace human’s works. Following this meeting, Rosenblatt created the perceptron in 1958, a very simplified model of a biological neuron that aimed to classify images. Yes, “artificial neural networks” and “computer vision” aren’t new.\nDespite these initial progresses, the field suffered from severe cutbacks in funding leading to the first AI winter in the 70s. The expectation were too great compared to what was achieved. This phenomenon occurred again in the 80s. At this point, practical applications came mainly from other approaches than neural networks, the Support-Vector Machines (SVMs) invented in 1992 proved to be useful for the decades to come.\nDuring the same time, Le Cun developped the first Convolutional Neural Network (CNN) which was specialized to work on images. Fast-forward a few years, Deep CNNs became the kind of image classification, first in 2011 with Ciresan, and later in 2012 with AlexNet of Krizhevsky.\nHere is first, and easy, quiz to test our knowledge on this chapter:\n   Click to reveal answer\n           $(document).ready(function () { launchQuiz( \"Introduction to Deep Learning\", eval(\"[\\n {Front: \\\"Are artificial neural networks recent?\\\", Back: \\\"No! It dates back from 1958 and Rosenblatt's Perceptron.\\\"},\\n {Front: \\\"What is the main reason why neural networks didn't work in the XXth century?\\\", Back: \\\"Because of a lack of \\u003cb\\u003ecomputational power\\u003c/b\\u003e\\\"},\\n {Front: \\\"What are the two parts of a classical machine learning pipeline?\\\", Back: \\\"A \\u003cb\\u003efeatures\\u003c/b\\u003e extractor (SIFT, HOG, etc.) and a \\u003cb\\u003emodel\\u003c/b\\u003e (SVM, Random Forest, etc.)\\\"},\\n {Front: \\\"What is the necessary math property of the individual part of a neural network?\\\", Back: \\\"They all must be differentiable\\\"},\\n {Front: \\\"What are the two phases during a neural network training\\\", Back: \\\"Forward and Backward passes\\\"},\\n {Front: \\\"During which pass is the neural network updated?\\\", Back: \\\"Backward passes\\\"},\\n]\"), false, 1 , false ); });  Deep Learning 101 In this course, we will first code a perceptron, the early CNN of Le Cun, and models similar to AlexNet. Then, we will explore the more recent approaches made to Deep Learning. At this point, you may be confused by the terminology: artificial intelligence, machine learning, neural networks, deep learning… What’s their differences?\nMachine Learning is a subfield of Artificial Intelligence based on statistical methods. Deep Learning is a subfield of Machine Learning based on deep neural networks.\nDeep Neural Networks, that I’ll now abbreviate to DNNs, are made of different modules, exactly like Legos and can be seen as a single function \\(f\\):\nOn the left, \\(X\\) is the input. It can be an image, a text, a sound, etc. On the right, \\(f(X)\\) is the result of the function \\(f\\) when applied on \\(X\\). The DNN showcased here is made of four blocks: two linear operations (\\(W_0\\), \\(W_1\\)) and two non-linear operations (\\(\\sigma\\), \\(\\sigma\\)). The former holds parameters which are also known as the network’s neurons. The latter are without any parameters.\nWe want to learn the parameters stored in \\(W_0\\) and \\(W_1\\) in order to have a function \\(f\\) suitable to our goal which could be classifying cats and dogs from an image. Following this example, our result \\(f(X)\\) would be a float value between 0 and 1. 0 would indicate that our network is certain that \\(X\\) is an image of cat, and respectively for 1 an image of dog. Most of the time our network is not fully confident and \\(f(X)\\) could be 0.2, 0.4, or even 0.7.\nSo, we want to make sure that \\(f\\) is as certain as possible —and right– given an image \\(X\\). To do so, we need a loss function (also called cost function). This new function has to penalize our network if it makes a mistake (i.e. saying cat for a dog image) or if it is too uncertain (i.e. 0.47 for a cat image):\n    A small loss means that our model is not that bad, and we shouldn’t change too much its parameters. On the other hand, a high loss means that we should change a lot of parameters in order to improve.\nIn this course, we will cover our to design our function \\(f\\), what loss function we can choose, and how to actually update our parameters.\n   Click to reveal answer\n           $(document).ready(function () { launchQuiz( \"Introduction to Deep Learning\", eval(\"[\\n {Front: \\\"Are artificial neural networks recent?\\\", Back: \\\"No! It dates back from 1958 and Rosenblatt's Perceptron.\\\"},\\n {Front: \\\"What is the main reason why neural networks didn't work in the XXth century?\\\", Back: \\\"Because of a lack of \\u003cb\\u003ecomputational power\\u003c/b\\u003e\\\"},\\n {Front: \\\"What are the two parts of a classical machine learning pipeline?\\\", Back: \\\"A \\u003cb\\u003efeatures\\u003c/b\\u003e extractor (SIFT, HOG, etc.) and a \\u003cb\\u003emodel\\u003c/b\\u003e (SVM, Random Forest, etc.)\\\"},\\n {Front: \\\"What is the necessary math property of the individual part of a neural network?\\\", Back: \\\"They all must be differentiable\\\"},\\n {Front: \\\"What are the two phases during a neural network training\\\", Back: \\\"Forward and Backward passes\\\"},\\n {Front: \\\"During which pass is the neural network updated?\\\", Back: \\\"Backward passes\\\"},\\n]\"), false, 1 , false ); });  Applications    Click to reveal answer\n           $(document).ready(function () { launchQuiz( \"Introduction to Deep Learning\", eval(\"[\\n {Front: \\\"What are non-structured data?\\\", Back: \\\"Data that doesn't fit in tables, such as text, images, or sound.\\\"},\\n {Front: \\\"Deep Learning excels on structured or non-structured data?\\\", Back: \\\"Non-structured data\\\"},\\n]\"), false, 2 , false ); });  Ecosystem    Click to reveal answer\n           $(document).ready(function () { launchQuiz( \"Introduction to Deep Learning\", eval(\"[\\n {Front: \\\"Python is slow, then why Deep Learning mainly exists on Python?\\\", Back: \\\"Because Python is binded to efficient C++ and CUDA\\\"},\\n {Front: \\\"What is the fastest hardware to train a neural network? CPU or GPU?\\\", Back: \\\"GPU\\\"},\\n]\"), false, 3 , false ); });  ",
-  "wordCount" : "1112",
+  "articleBody": "Welcome to this course on Deep Learning for Computer Vision!\nThis course will teach you the fundamentals of Deep Learning applied to images. Each topic will be covered under three different type of materials:\n Lessons, such as this one, accompanied with slides and small quizzes between chapters; Practices, with Google Colab notebooks where we will code actual algorithms; And, quizzes, where you will test your recall on the important notions.  Lessons and practices are essential to learn new materials. However knowledge can be brittle, it’s then best to test it with active recall through quizzes. If you’re really motivated, you can also download the Anki decks I provide for each lessons. Anki is a space-repetition tools to ingrain deeply knowledge in your memory, and to basically never forget it. I’m not kidding, it’s a marvel.\nNo more chitchat, let’s start.\nA Bit Of History In 1956, the summer workshop of Darmouth was held with prestigious participants (Minsky, Shannon, McCarthy, etc.). This event marked the starting point of Artificial Intelligence as a field on its own. The hopes were high: beating a chess champion, prove math theorems, replace human’s works. Following this meeting, Rosenblatt created the perceptron in 1958, a very simplified model of a biological neuron that aimed to classify images. Yes, “artificial neural networks” and “computer vision” aren’t new.\nDespite these initial progresses, the field suffered from severe cutbacks in funding leading to the first AI winter in the 70s. The expectation were too great compared to what was achieved. This phenomenon occurred again in the 80s. At this point, practical applications came mainly from other approaches than neural networks, the Support-Vector Machines (SVMs) invented in 1992 proved to be useful for the decades to come.\nDuring the same time, Le Cun developped the first Convolutional Neural Network (CNN) which was specialized to work on images. Fast-forward a few years, Deep CNNs became the kind of image classification, first in 2011 with Ciresan, and later in 2012 with AlexNet of Krizhevsky.\nHere is first, and easy, quiz to test our knowledge on this chapter:\n   Click to reveal answer\n           $(document).ready(function () { launchQuiz( \"Introduction to Deep Learning\", eval(\"[\\n {Front: \\\"Are artificial neural networks recent?\\\", Back: \\\"No! It dates back from 1958 and Rosenblatt's Perceptron.\\\"},\\n {Front: \\\"What is the main reason why neural networks didn't work in the XXth century?\\\", Back: \\\"Because of a lack of \\u003cb\\u003ecomputational power\\u003c/b\\u003e\\\"},\\n {Front: \\\"What are the two parts of a classical machine learning pipeline?\\\", Back: \\\"A \\u003cb\\u003efeatures\\u003c/b\\u003e extractor (SIFT, HOG, etc.) and a \\u003cb\\u003emodel\\u003c/b\\u003e (SVM, Random Forest, etc.)\\\"},\\n {Front: \\\"What is the necessary math property of the individual part of a neural network?\\\", Back: \\\"They all must be differentiable\\\"},\\n {Front: \\\"What are the two phases during a neural network training\\\", Back: \\\"Forward and Backward passes\\\"},\\n {Front: \\\"During which pass is the neural network updated?\\\", Back: \\\"Backward passes\\\"},\\n]\"), false, 1 , false ); });  Deep Learning 101 In this course, we will first code a perceptron, the early CNN of Le Cun, and models similar to AlexNet. Then, we will explore the more recent approaches made to Deep Learning. At this point, you may be confused by the terminology: artificial intelligence, machine learning, neural networks, deep learning… What’s their differences?\n    AI vs ML vs DL\n  Machine Learning is a subfield of Artificial Intelligence based on statistical methods. Deep Learning is a subfield of Machine Learning based on deep neural networks.\nDeep Neural Networks, that I’ll now abbreviate to DNNs, are made of different modules, exactly like Legos and can be seen as a single function \\(f\\):\n    Computation graph\n  On the left, \\(X\\) is the input. It can be an image, a text, a sound, etc. On the right, \\(f(X)\\) is the result of the function \\(f\\) when applied on \\(X\\). The DNN showcased here is made of four blocks: two linear operations (\\(W_0\\), \\(W_1\\)) and two non-linear operations (\\(\\sigma\\), \\(\\sigma\\)). The former holds parameters which are also known as the network’s neurons. The latter are without any parameters.\nWe want to learn the parameters stored in \\(W_0\\) and \\(W_1\\) in order to have a function \\(f\\) suitable to our goal which could be classifying cats and dogs from an image. Following this example, our result \\(f(X)\\) would be a float value between 0 and 1. 0 would indicate that our network is certain that \\(X\\) is an image of cat, and respectively for 1 an image of dog. Most of the time our network is not fully confident and \\(f(X)\\) could be 0.2, 0.4, or even 0.7.\nSo, we want to make sure that \\(f\\) is as certain as possible —and right– given an image \\(X\\). To do so, we need a loss function (also called cost function). This new function has to penalize our network if it makes a mistake (i.e. saying cat for a dog image) or if it is too uncertain (i.e. 0.47 for a cat image):\n    Example of the loss function\n  A small loss means that our model is not that bad, and we shouldn’t change too much its parameters. On the other hand, a high loss means that we should change a lot of parameters in order to improve.\nIn this course, we will cover our to design our function \\(f\\), what loss function we can choose, and how to actually update our parameters.\n   Click to reveal answer\n           $(document).ready(function () { launchQuiz( \"Introduction to Deep Learning\", eval(\"[\\n {Front: \\\"Are artificial neural networks recent?\\\", Back: \\\"No! It dates back from 1958 and Rosenblatt's Perceptron.\\\"},\\n {Front: \\\"What is the main reason why neural networks didn't work in the XXth century?\\\", Back: \\\"Because of a lack of \\u003cb\\u003ecomputational power\\u003c/b\\u003e\\\"},\\n {Front: \\\"What are the two parts of a classical machine learning pipeline?\\\", Back: \\\"A \\u003cb\\u003efeatures\\u003c/b\\u003e extractor (SIFT, HOG, etc.) and a \\u003cb\\u003emodel\\u003c/b\\u003e (SVM, Random Forest, etc.)\\\"},\\n {Front: \\\"What is the necessary math property of the individual part of a neural network?\\\", Back: \\\"They all must be differentiable\\\"},\\n {Front: \\\"What are the two phases during a neural network training\\\", Back: \\\"Forward and Backward passes\\\"},\\n {Front: \\\"During which pass is the neural network updated?\\\", Back: \\\"Backward passes\\\"},\\n]\"), false, 1 , false ); });  Applications    Click to reveal answer\n           $(document).ready(function () { launchQuiz( \"Introduction to Deep Learning\", eval(\"[\\n {Front: \\\"What are non-structured data?\\\", Back: \\\"Data that doesn't fit in tables, such as text, images, or sound.\\\"},\\n {Front: \\\"Deep Learning excels on structured or non-structured data?\\\", Back: \\\"Non-structured data\\\"},\\n]\"), false, 2 , false ); });  Ecosystem    Click to reveal answer\n           $(document).ready(function () { launchQuiz( \"Introduction to Deep Learning\", eval(\"[\\n {Front: \\\"Python is slow, then why Deep Learning mainly exists on Python?\\\", Back: \\\"Because Python is binded to efficient C++ and CUDA\\\"},\\n {Front: \\\"What is the fastest hardware to train a neural network? CPU or GPU?\\\", Back: \\\"GPU\\\"},\\n]\"), false, 3 , false ); });  ",
+  "wordCount" : "1124",
   "inLanguage": "en",
   "datePublished": "1956-06-18T00:00:00Z",
   "dateModified": "1956-06-18T00:00:00Z",
@@ -71,7 +68,7 @@
     "name": "DeepCourse",
     "logo": {
       "@type": "ImageObject",
-      "url": "favicon.ico"
+      "url": "/favicon.ico"
     }
   }
 }
@@ -206,10 +203,36 @@ and later in 2012 with <strong>AlexNet</strong> of Krizhevsky.</p>
 <p>In this course, we will first code a perceptron, the early CNN of Le Cun, and models similar to AlexNet.
 Then, we will explore the more recent approaches made to Deep Learning. At this point, you may be confused by the terminology:
 artificial intelligence, machine learning, neural networks, deep learning&hellip; What&rsquo;s their differences?</p>
-<p><img src="aivsmlvsdl.png" alt="AI vs ML vs DL"></p>
+
+
+
+
+<figure>
+    <picture>
+        <source srcset="aivsmlvsdl.webp" type="image/webp">
+        <img loading="lazy" src="aivsmlvsdl.png" alt="AI vs ML vs DL" defer>
+    </picture>
+    <figcaption>
+        <p class="caption">AI vs ML vs DL</p>
+    </figcaption>
+</figure>
+
 <p>Machine Learning is a subfield of Artificial Intelligence based on statistical methods. Deep Learning is a subfield of Machine Learning based on deep neural networks.</p>
 <p>Deep Neural Networks, that I&rsquo;ll now abbreviate to DNNs, are made of different modules, exactly like Legos and can be seen as a single function \(f\):</p>
-<p><img src="graph.png" alt="Computation graph"></p>
+
+
+
+
+<figure>
+    <picture>
+        <source srcset="graph.webp" type="image/webp">
+        <img loading="lazy" src="graph.png" alt="Computation graph" defer>
+    </picture>
+    <figcaption>
+        <p class="caption">Computation graph</p>
+    </figcaption>
+</figure>
+
 <p>On the left, \(X\) is the input. It can be an image, a text, a sound, etc. On the
 right, \(f(X)\) is the result of the function \(f\) when applied on \(X\).
 The DNN showcased here is made of four blocks: two <strong>linear</strong> operations
@@ -225,74 +248,19 @@ Most of the time our network is not fully confident and \(f(X)\) could be 0.2, 0
 To do so, we need a <strong>loss</strong> function (also called cost function). This new function
 has to penalize our network if it makes a mistake (i.e. saying cat for a dog image) or if it is
 too uncertain (i.e. 0.47 for a cat image):</p>
-<p><img src="lossfunction.png" alt="Example of the loss function"></p>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="img" style="background: url(data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAABIUlEQVR4nJyQMU8CQRCFd&#43;72ZjngjgVBokGhAAuMFaGnMHb2lv4hO/&#43;CjYlWdkYaKwsT7Cw0RAvpMAS5Y5dlxxyX2Jhg4tdO3nvzHl8aM3obarNstPaI0cXDGVtx1D6phjtsLXz8Onjq32arjXqzpbS&#43;f7lxgS/JdOuHBaxEKh6OP7ILl4yVUjqOE4ah6/I4jowxPL/dLO9/YcYHACHw&#43;OA0da0EW5kVpULxd6YQyBgDIlr/2xqcfyuTzkT2c/TuoR&#43;Uq0T27vkqPXTqvWK28ocYAAb961q7m9/YnCt9&#43;XieDlaTTd8JFlrPlWKMEZGUEjGpqpSOohkAcGvtbDrV8zgZDLGz20tdQ7&#43;YzOV5wWTCSiWWy/0ECoGIHgB8BwAA//8gtWT1esppMQAAAABJRU5ErkJggg==); background-size: cover">
-  <svg width="1208" height="506" aria-hidden="true"></svg>
-  <img
-    class="lazyload"
-    data-sizes="auto"
-    data-srcset='
-    
-      /introduction/lossfunction_hu811732b29e2b674cf6a8997b50ea92ee_118759_500x0_resize_box_2.png 500w
-    
-    
-      , /introduction/lossfunction_hu811732b29e2b674cf6a8997b50ea92ee_118759_800x0_resize_box_2.png 800w
-    
-    
-      , /introduction/lossfunction_hu811732b29e2b674cf6a8997b50ea92ee_118759_1200x0_resize_box_2.png 1200w
-    
-    '
-    
-      data-src="../introduction/lossfunction.png"
-    
-    width="1208" height="506"
-    alt='Example of the loss function'>
-  <noscript>
-    <img
-      loading="lazy"
-      
-      srcset='
-      
-        /introduction/lossfunction_hu811732b29e2b674cf6a8997b50ea92ee_118759_500x0_resize_box_2.png 500w
-      
-      
-        , /introduction/lossfunction_hu811732b29e2b674cf6a8997b50ea92ee_118759_800x0_resize_box_2.png 800w
-      
-      
-        , /introduction/lossfunction_hu811732b29e2b674cf6a8997b50ea92ee_118759_1200x0_resize_box_2.png 1200w
-      
-      '
-      
-        src="../introduction/lossfunction.png"
-      
-      width="1208" height="506"
-      alt='Example of the loss function'>
-  </noscript>
-</div>
+<figure>
+    <picture>
+        <source srcset="lossfunction.webp" type="image/webp">
+        <img loading="lazy" src="lossfunction.png" alt="Example of the loss function" defer>
+    </picture>
+    <figcaption>
+        <p class="caption">Example of the loss function</p>
+    </figcaption>
+</figure>
 
 <p>A small loss means that our model is not that bad, and we shouldn&rsquo;t change too much
 its parameters. On the other hand, a high loss means that we should change a lot of

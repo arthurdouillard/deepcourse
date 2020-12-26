@@ -61,13 +61,15 @@ In this course, we will first code a perceptron, the early CNN of Le Cun, and mo
 Then, we will explore the more recent approaches made to Deep Learning. At this point, you may be confused by the terminology:
 artificial intelligence, machine learning, neural networks, deep learning... What's their differences?
 
-![AI vs ML vs DL](aivsmlvsdl.png)
+{{< optimg src="aivsmlvsdl.png" alt="AI vs ML vs DL" >}}
+
 
 Machine Learning is a subfield of Artificial Intelligence based on statistical methods. Deep Learning is a subfield of Machine Learning based on deep neural networks.
 
 Deep Neural Networks, that I'll now abbreviate to DNNs, are made of different modules, exactly like Legos and can be seen as a single function \\(f\\):
 
-![Computation graph](graph.png)
+{{< optimg src="graph.png" alt="Computation graph" >}}
+
 
 On the left, \\(X\\) is the input. It can be an image, a text, a sound, etc. On the
 right, \\(f(X)\\) is the result of the function \\(f\\) when applied on \\(X\\).
@@ -86,8 +88,6 @@ So, we want to make sure that \\(f\\) is as certain as possible ---and right-- g
 To do so, we need a **loss** function (also called cost function). This new function
 has to penalize our network if it makes a mistake (i.e. saying cat for a dog image) or if it is
 too uncertain (i.e. 0.47 for a cat image):
-
-![Example of the loss function](lossfunction.png)
 
 {{< optimg src="lossfunction.png" alt="Example of the loss function" >}}
 
