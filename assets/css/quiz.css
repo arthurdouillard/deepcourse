@@ -26,6 +26,10 @@ body {
     margin-bottom: 30px;
 }
 
+.quiz-arrow {
+    height: 40px;
+}
+
 .card-button {
     cursor: pointer;
 }
