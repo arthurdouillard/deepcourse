@@ -39,3 +39,8 @@ position: absolute;
 top:0;
 left:0;
 }
+
+.caption {
+    text-align: center;
+    font-style: italic;
+}

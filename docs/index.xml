@@ -4,8 +4,17 @@
     <title>DeepCourse</title>
     <link>/</link>
     <description>Recent content on DeepCourse</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 18 Jun 1956 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep Neural Network</title>
+      <link>/dnn/</link>
+      <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
+      
+      <guid>/dnn/</guid>
+      <description>This lesson has more math than usual, but it&amp;rsquo;s important that we don&amp;rsquo;t shy away the theory behind deep learning. It will help us build a strong understanding of the algorithms we will code in later sections. If you feel overwhelmed by the math here, please see this review first.
+We are talking of neural networks, then what is a neuron? Certainly not the kind that is in your brain. While biologically inspired, artificial neurons are very different from the real counterpart, thus for now put aside any comparison with brains.</description>
+    </item>
+    
     <item>
       <title>Introduction</title>
       <link>/introduction/</link>

@@ -3,27 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
-    <lastmod>1956-06-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/deeplearning/</loc>
+    <loc>/dnn/</loc>
     <lastmod>1956-06-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/introduction/</loc>
-    <lastmod>1956-06-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>1956-06-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/vision/</loc>
     <lastmod>1956-06-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -36,11 +21,19 @@
   </url>
   
   <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
     <loc>/search/</loc>
   </url>
   
   <url>
     <loc>/series/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>

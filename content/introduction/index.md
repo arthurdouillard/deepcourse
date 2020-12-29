@@ -3,9 +3,10 @@ author: "Arthur Douillard"
 title: "Introduction"
 date: "1956-06-18"
 description: "Introduction to Deep Learning"
-tags: ["deeplearning", "vision"]
+tags: []
 hideMeta: false
 
+ShowToc: true
 hasQuiz: true
 ---
 
@@ -42,18 +43,6 @@ neural networks, the Support-Vector Machines (SVMs) invented in 1992 proved to b
 During the same time, Le Cun developped the first **Convolutional Neural Network** (CNN) which was specialized to
 work on images. Fast-forward a few years, **Deep CNNs** became the kind of image classification, first in 2011 with Ciresan,
 and later in 2012 with **AlexNet** of Krizhevsky.
-
-Here is first, and easy, quiz to test our knowledge on this chapter:
-
-{{< quiz cards=`[
-    {Front: "Are artificial neural networks recent?", Back: "No! It dates back from 1958 and Rosenblatt's Perceptron."},
-    {Front: "What is the main reason why neural networks didn't work in the XXth century?", Back: "Because of a lack of <b>computational power</b>"},
-    {Front: "What are the two parts of a classical machine learning pipeline?", Back: "A <b>features</b> extractor (SIFT, HOG, etc.) and a <b>model</b> (SVM, Random Forest, etc.)"},
-    {Front: "What is the necessary math property of the individual part of a neural network?", Back: "They all must be differentiable"},
-    {Front: "What are the two phases during a neural network training", Back: "Forward and Backward passes"},
-    {Front: "During which pass is the neural network updated?", Back: "Backward passes"},
-]` quizid=1 >}}
-
 
 # Deep Learning 101
 
@@ -95,30 +84,58 @@ A small loss means that our model is not that bad, and we shouldn't change too m
 its parameters. On the other hand, a high loss means that we should change a lot of
 parameters in order to improve.
 
-In this course, we will cover our to design our function \\(f\\), what loss function
+In this course, we will cover how to design our function \\(f\\) (also called model or architecture), what loss function
 we can choose, and how to actually update our parameters.
-
-
-{{< quiz cards=`[
-    {Front: "Are artificial neural networks recent?", Back: "No! It dates back from 1958 and Rosenblatt's Perceptron."},
-    {Front: "What is the main reason why neural networks didn't work in the XXth century?", Back: "Because of a lack of <b>computational power</b>"},
-    {Front: "What are the two parts of a classical machine learning pipeline?", Back: "A <b>features</b> extractor (SIFT, HOG, etc.) and a <b>model</b> (SVM, Random Forest, etc.)"},
-    {Front: "What is the necessary math property of the individual part of a neural network?", Back: "They all must be differentiable"},
-    {Front: "What are the two phases during a neural network training", Back: "Forward and Backward passes"},
-    {Front: "During which pass is the neural network updated?", Back: "Backward passes"},
-]` quizid=1 >}}
 
 # Applications
 
+There is a lot of hype currently going about Deep Learning, but is there any actual
+applications? Yes there are!
 
-{{< quiz cards=`[
-    {Front: "What are non-structured data?", Back: "Data that doesn't fit in tables, such as text, images, or sound."},
-    {Front: "Deep Learning excels on structured or non-structured data?", Back: "Non-structured data"},
-]` quizid=2 >}}
+- When Siri, Alexa, or Ok Google listen and understand your oral command
+- When your phone unlock itself when it detects your face, like Apple's FaceID
+- [Google translate](https://ai.googleblog.com/2020/06/recent-advances-in-google-translate.html) or even your [Google search](https://blog.google/products/search/search-language-understanding-bert/)
+- [Autonomous driving](https://www.youtube.com/watch?v=hx7BXih7zx8)
+- Faster analysis for [radiology](https://www.sciencedirect.com/science/article/pii/S0720048X19300919)
+- [AlphaFold 2](https://deepmind.com/blog/article/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology) recently greatly improved the [protein folding problem](https://rootsofprogress.org/alphafold-protein-folding-explainer)
+- Better resolution of video games with more FPS with [Nvidia's DLSS](https://www.nvidia.com/fr-fr/geforce/technologies/dlss/)
+- Faster resolution of computationally intensive [physics simulation](https://arxiv.org/abs/1910.07291)
+
+And many more.
 
 # Ecosystem
 
+Deep Learning and Data Science, both in research and industry, is mainly done
+with the **Python** programming language. While Python is a very slow language,
+computation heavy tasks are deferred to a faster language like Fortran or C++.
+
+Furthermore while programming is usually done on CPUs, it's still too slow
+for the large amount of compute that deep neural networks need. Thus we will need
+another piece of hardware: **GPU**s. Originally designed for computer graphic applications
+that also do a lot of algebra. This is also the main reason why Deep Learning didn't
+work before recently, we didn't have the right hardware!
+
+Unfortunately, GPUs are quite expensive. For this course all coding practice will
+be done on Google Colab which lend for free GPUs for a few hours. However, you're free
+to download the exercises and run it on your favorite setting.
+
+Finally, several Deep Learning frameworks exist: **Pytorch**, Keras / Tensorflow, Jax, etc.
+Although Tensorflow greatly improved with its [second version](https://www.tensorflow.org/guide/effective_tf2),
+we will use PyTorch. It's a personal opinion, but I feel PyTorch to be more Pythonic and
+its API is also clearer. But overall, it doesn't make a big difference; if you master PyTorch,
+we can learn in no time Tensorflow.
+
+# Quiz
+
+Now, let's check with a quick quiz our understanding of this chapter:
+
 {{< quiz cards=`[
-    {Front: "Python is slow, then why Deep Learning mainly exists on Python?", Back: "Because Python is binded to efficient C++ and CUDA"},
+    {Front: "Are artificial neural networks recent?", Back: "No! It dates back from 1958 and Rosenblatt's Perceptron"},
+    {Front: "Is artificial intelligence only Deep Learning?", Back: "No it's only a sub-domain"},
+    {Front: "When learning of Neural Network, which part of it is modified?", Back: "Its parameters"},
+    {Front: "How do we call the function that penalize the Neural Network when it makes mistakes?", Back: "Loss function"},
+    {Front: "What is the main reason why neural networks didn't work in the XXth century?", Back: "Because of a lack of <b>computational power</b>"},
+    {Front: "What programming language is mainly used in Deep Learning", Back: "Python"},
+    {Front: "Python is slow, then why Deep Learning mainly exists on Python?", Back: "Because Python is binded to efficient C++"},
     {Front: "What is the fastest hardware to train a neural network? CPU or GPU?", Back: "GPU"},
-]` quizid=3 >}}
+]` quizid=1 >}}
