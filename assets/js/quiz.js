@@ -28,6 +28,10 @@ class Quiz {
         } else {
             this.mapFakeIndexToRealIndex = realIndexes;
         }
+
+        this.getElt("previous-button").addEventListener('click', () => this.changePrevious());
+        this.getElt("after-button").addEventListener('click', () => this.changeAfter());
+        this.getElt("ankiapp").addEventListener('click', () => this.showBackCard());
     }
 
     getElt(eltId) {
@@ -65,8 +69,14 @@ class Quiz {
 
             this.getElt("card-helper").style.display = "none";
         }
-        this.hasGraded[this.noteIndex] = true;
-        this.getElt("after-button").style.visibility = "visible";
+
+        if (!this.fullPage) {
+            this.hasGraded[this.noteIndex] = true;
+        }
+
+        if (this.noteIndex < this.cards.length - 1) {
+            this.getElt("after-button").style.visibility = "visible";
+        }
     }
 
     gradCard(is_success) {
@@ -100,6 +110,7 @@ class Quiz {
 
     displayCard() {
         this.getElt("after-button").style.visibility = "hidden";
+        this.getElt("card-global-back").style.visibility = "hidden";
         let card = this.getElt("card");
 
         let realIndex = this.mapFakeIndexToRealIndex[this.noteIndex];
@@ -115,7 +126,7 @@ class Quiz {
         if (this.hasGraded[this.noteIndex]) {
             this.getElt("card-global-back").style.visibility = "visible";
             if (this.noteIndex < this.cards.length - 1) {
-                this.getElt("after-button").style.visibility = "visible";
+                //this.getElt("after-button").style.visibility = "visible";
             } else {
                 this.getElt("after-button").style.visibility = "hidden";
             }
@@ -140,18 +151,19 @@ class Quiz {
         }
     }
 
-    changePrevious(e) {
+    changePrevious() {
         if (this.noteIndex > 0) {
             this.noteIndex = this.noteIndex - 1;
             this.displayCard();
         }
     }
 
-    changeAfter(e) {
+    changeAfter() {
         if (this.noteIndex < this.cards.length - 1 && this.hasGraded[this.noteIndex]) {
             if (!this.fullPage) {
                 this.hasGraded[this.noteIndex] = true;
             }
+
             this.noteIndex = this.noteIndex + 1;
             this.displayCard();
         }
@@ -166,11 +178,11 @@ class Quiz {
         }
         else if (e.keyCode == '37') {
             // left arrow
-            this.changePrevious(e);
+            this.changePrevious();
         }
         else if (e.keyCode == '39') {
             // right arrow
-            this.changeAfter(e);
+            this.changeAfter();
         }
         else if (e.keyCode == '81' && this.getElt("card-global-back").style.visibility == "visible") {
             // q
@@ -188,8 +200,4 @@ class Quiz {
 function launchQuiz(quizTitle, cards, randomOrder, instanceId, fullPage) {
     let quiz = new Quiz(cards, quizTitle, fullPage, instanceId, randomOrder);
     quiz.launch();
-
-    quiz.getElt("previous-button").addEventListener('click', function () { quiz.changePrevious() });
-    quiz.getElt("after-button").addEventListener('click', function () { quiz.changeAfter() });
-    quiz.getElt("ankiapp").addEventListener('click', function () { quiz.showBackCard() });
 }
