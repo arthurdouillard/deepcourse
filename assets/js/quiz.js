@@ -1,7 +1,4 @@
-var deckNotes = {};
-var noteIndex = {};
-var grades = {};
-var hasGraded = {};
+var lastModifiedQuiz = 1;
 
 class Quiz {
     constructor(cards, title, fullPage, instanceId, randomOrder) {
@@ -29,9 +26,11 @@ class Quiz {
             this.mapFakeIndexToRealIndex = realIndexes;
         }
 
-        this.getElt("previous-button").addEventListener('click', () => this.changePrevious());
-        this.getElt("after-button").addEventListener('click', () => this.changeAfter());
-        this.getElt("ankiapp").addEventListener('click', () => this.showBackCard());
+        this.getElt("previous-button").addEventListener('click', (e) => this.changePrevious(e));
+        this.getElt("after-button").addEventListener('click', (e) => this.changeAfter(e));
+        this.getElt("ankiapp").addEventListener('click', (e) => this.showBackCard(e));
+
+        this.rootApp = this.getElt("ankiapp");
     }
 
     getElt(eltId) {
@@ -42,10 +41,12 @@ class Quiz {
         return elt;
     }
 
+    hasFocus() {
+        return this.fullPage || (lastModifiedQuiz == this.instanceId);
+    }
+
     launch() {
-        if (this.fullPage) {
-            document.onkeydown = function (e) { this.changeCard(e) };
-        }
+        document.onkeydown = (e) => this.changeCard(e);
         this.displayCard();
     }
 
@@ -77,6 +78,9 @@ class Quiz {
         if (this.noteIndex < this.cards.length - 1) {
             this.getElt("after-button").style.visibility = "visible";
         }
+
+
+        lastModifiedQuiz = this.instanceId;
     }
 
     gradCard(is_success) {
@@ -111,6 +115,7 @@ class Quiz {
     displayCard() {
         this.getElt("after-button").style.visibility = "hidden";
         this.getElt("card-global-back").style.visibility = "hidden";
+
         let card = this.getElt("card");
 
         let realIndex = this.mapFakeIndexToRealIndex[this.noteIndex];
@@ -149,6 +154,8 @@ class Quiz {
         } catch (error) {
             console.log("MathJax error (used for math formula rendering): " + error)
         }
+        console.log("disp", this.getElt("card-global-back").style.visibility)
+
     }
 
     changePrevious() {
@@ -156,33 +163,44 @@ class Quiz {
             this.noteIndex = this.noteIndex - 1;
             this.displayCard();
         }
+
+        lastModifiedQuiz = this.instanceId;
     }
 
-    changeAfter() {
+    changeAfter(e) {
         if (this.noteIndex < this.cards.length - 1 && this.hasGraded[this.noteIndex]) {
             if (!this.fullPage) {
                 this.hasGraded[this.noteIndex] = true;
             }
 
             this.noteIndex = this.noteIndex + 1;
+            console.log("next", this.getElt("card-global-back").style.visibility)
             this.displayCard();
         }
+        e.stopPropagation();
+        e.preventDefault();
+
+        lastModifiedQuiz = this.instanceId;
     }
 
     changeCard(e) {
+        if (!this.hasFocus()) {
+            return;
+        }
+
         e = e || window.event;
 
         if (e.keyCode == '38' || e.keyCode == '40') {
             // up arrow or down arrow
-            this.showBackCard()
+            this.showBackCard(e)
         }
         else if (e.keyCode == '37') {
             // left arrow
-            this.changePrevious();
+            this.changePrevious(e);
         }
         else if (e.keyCode == '39') {
             // right arrow
-            this.changeAfter();
+            this.changeAfter(e);
         }
         else if (e.keyCode == '81' && this.getElt("card-global-back").style.visibility == "visible") {
             // q

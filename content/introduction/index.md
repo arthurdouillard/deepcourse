@@ -131,11 +131,6 @@ Now, let's check with a quick quiz our understanding of this chapter:
 
 {{< quiz cards=`[
     {Front: "Are artificial neural networks recent?", Back: "No! It dates back from 1958 and Rosenblatt's Perceptron"},
-    {Front: "What is the fastest hardware to train a neural network? CPU or GPU?", Back: "GPU"},
-]` quizid=2 >}}
-
-{{< quiz cards=`[
-    {Front: "Are artificial neural networks recent?", Back: "No! It dates back from 1958 and Rosenblatt's Perceptron"},
     {Front: "Is artificial intelligence only Deep Learning?", Back: "No it's only a sub-domain"},
     {Front: "When learning of Neural Network, which part of it is modified?", Back: "Its parameters"},
     {Front: "How do we call the function that penalize the Neural Network when it makes mistakes?", Back: "Loss function"},

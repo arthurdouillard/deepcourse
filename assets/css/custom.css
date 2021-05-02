@@ -9,12 +9,9 @@ a:hover {
     height: 20px
 }
 
-.mysvg text {
-    font-family: Arial;
-}
-
-.mysvg {
-    text-align: center;
+picture {
+    display: flex;
+    justify-content: center;
 }
 
 
