@@ -10,30 +10,6 @@ ShowToc: true
 hasQuiz: true
 ---
 
-{{< rawhtml >}}
-<html>
-  <head>
-    <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
-  </head>
-  <body>
-    <orbit-reviewarea color="pink">
-      <orbit-prompt
-        question="What's the working name for Andy's experimental mnemonic medium platform?"
-        answer="Orbit"
-      ></orbit-prompt>
-      <orbit-prompt
-        question="What's the new-ish web technology used to embed Orbit prompts into web pages?"
-        answer="Web components"
-      ></orbit-prompt>
-      <orbit-prompt
-        question="Given a right triangle with legs of length $a$ and $b$, what is the length of hypotenuse $c$?"
-        answer="$$c = \sqrt{a^2 + b^2}$$"
-      ></orbit-prompt>
-    </orbit-reviewarea>
-  </body>
-</html>
-{{< /rawhtml >}}
-
 Welcome to this course on Deep Learning for Computer Vision!
 
 This course will teach you the fundamentals of Deep Learning applied to images. Each topic

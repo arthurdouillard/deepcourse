@@ -1,0 +1,5 @@
+freeze(net.conv1)
+freeze(net.bn1)
+freeze(net.layer1)
+freeze(net.layer2)
+freeze(net.layer3)
