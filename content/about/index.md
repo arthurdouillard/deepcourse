@@ -57,4 +57,5 @@ I cannot stress enough how space-repetition is amazing. Please try it.
 I had many inspiration for this course, here are some:
 
 - [Polytechnique's master of Data Science](https://m2dsupsdlclass.github.io/lectures-labs/)
+    - This is the course Charles Ollion taught me at EPITA. He then task me to taught this course myself at EPITA. Thus this current course is in some part very similar to it.
 - [Stanford's famous CS231n](http://cs231n.stanford.edu/)

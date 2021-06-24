@@ -4,7 +4,7 @@
 -->
 <div class="wrapper" id="svgroadmap">
     <div class="svg-container">
-        <svg version="1.1" viewBox="0 0 500 700" preserveAspectRatio="xMinYMin meet" class="svg-content">
+        <svg version="1.1" viewBox="0 0 500 900" preserveAspectRatio="xMinYMin meet" class="svg-content">
 
             <defs>
                 <rect id="myRectCourse" fill="#66cc00" x="0" y="0" ry="3" rx="3" width="130" height="20"
@@ -18,6 +18,15 @@
 
                 <g id="myQuizz" class="roadmap-quizz">
                     <circle cx="65" cy="0" r="20" class="roadmap-quizz-circle" />
+                    <text x="65" y="0" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7"
+                        font-weight="900" style="text-transform:uppercase; letter-spacing: 1px"
+                        dominant-baseline="middle" alignment-baseline="middle" text-anchor="middle"
+                        class="roadmap-quizz-text">Quiz
+                    </text>
+                </g>
+
+                <g id="myQuizzWIP" class="roadmap-quizz">
+                    <circle cx="65" cy="0" r="20" class="roadmap-quizz-circle-wip" />
                     <text x="65" y="0" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7"
                         font-weight="900" style="text-transform:uppercase; letter-spacing: 1px"
                         dominant-baseline="middle" alignment-baseline="middle" text-anchor="middle"
@@ -68,7 +77,7 @@
 
             <g transform="translate(0, 60)">
                 <a xlink:href="">
-                    <use xlink:href="#myQuizz" />
+                    <use xlink:href="#myQuizzWIP" />
                 </a>
                 <use xlink:href="#mySmallArrowDown" />
             </g>
@@ -83,7 +92,7 @@
 
             <g transform="translate(0, 160)">
                 <a xlink:href="">
-                    <use xlink:href="#myQuizz" />
+                    <use xlink:href="#myQuizzWIP" />
                 </a>
             </g>
 
@@ -113,7 +122,7 @@
             </g>
             <g transform="translate(360, 200)">
                 <a xlink:href="">
-                    <use xlink:href="#myQuizz" />
+                    <use xlink:href="#myQuizzWIP" />
                 </a>
             </g>
 
@@ -149,7 +158,7 @@
             </g>
             <g transform="translate(0, 340)">
                 <a xlink:href="">
-                    <use xlink:href="#myQuizz" />
+                    <use xlink:href="#myQuizzWIP" />
                 </a>
             </g>
 
@@ -170,15 +179,15 @@
                 <use xlink:href="#mySmallArrowDown" />
             </g>
             <g transform="translate(360, 340)">
-                <a xlink:href="">
-                    <use xlink:href="#myRectWIP" />
+                <a xlink:href="https://colab.research.google.com/drive/1l1WyRh8JHeoPcKku3yM73-zhgN323drM?usp=sharing">
+                    <use xlink:href="#myRectPractice" />
                     <text x="65" y="10" class="roadmap-text">Segmentation</text>
                 </a>
                 <use xlink:href="#mySmallArrowDown" />
             </g>
             <g transform="translate(360, 400)">
                 <a xlink:href="">
-                    <use xlink:href="#myQuizz" />
+                    <use xlink:href="#myQuizzWIP" />
                 </a>
             </g>
 
@@ -213,7 +222,7 @@
             </g>
             <g transform="translate(0, 540)">
                 <a xlink:href="">
-                    <use xlink:href="#myQuizz" />
+                    <use xlink:href="#myQuizzWIP" />
                 </a>
             </g>
 
@@ -243,13 +252,13 @@
             <g transform="translate(360, 580)">
                 <a xlink:href="">
                     <use xlink:href="#myRectWIP" />
-                    <text x="65" y="10" class="roadmap-text">Auto-regressive</text>
+                    <text x="65" y="10" class="roadmap-text">Style Transfer</text>
                 </a>
                 <use xlink:href="#mySmallArrowDown" />
             </g>
             <g transform="translate(360, 640)">
                 <a xlink:href="">
-                    <use xlink:href="#myQuizz" />
+                    <use xlink:href="#myQuizzWIP" />
                 </a>
             </g>
 
@@ -257,28 +266,79 @@
             <g transform="translate(180, 600)">
                 <a xlink:href="">
                     <use xlink:href="#myRectWIP" />
-                    <text x="65" y="10" class="roadmap-text">Futur</text>
+                    <text x="65" y="10" class="roadmap-text">New Archi</text>
                 </a>
                 <use xlink:href="#myLeftArrow" />
-                <use xlink:href="#myFurtherArrow" />
+                <use xlink:href="#myLongArrowDown" />
             </g>
             <g transform="translate(0, 600)">
                 <a xlink:href="">
                     <use xlink:href="#myRectWIP" />
-                    <text x="65" y="10" class="roadmap-text">Transformers & MLPs</text>
+                    <text x="65" y="10" class="roadmap-text">Transformers</text>
                 </a>
                 <use xlink:href="#mySmallArrowDown" />
             </g>
             <g transform="translate(0, 640)">
                 <a xlink:href="">
                     <use xlink:href="#myRectWIP" />
-                    <text x="65" y="10" class="roadmap-text">Continual Learning</text>
+                    <text x="65" y="10" class="roadmap-text">MLP</text>
                 </a>
                 <use xlink:href="#mySmallArrowDown" />
             </g>
             <g transform="translate(0, 700)">
                 <a xlink:href="">
-                    <use xlink:href="#myQuizz" />
+                    <use xlink:href="#myQuizzWIP" />
+                </a>
+            </g>
+
+            <g transform="translate(180, 680)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectWIP" />
+                    <text x="65" y="10" class="roadmap-text">Robutness</text>
+                </a>
+                <use xlink:href="#myRightArrow" />
+                <use xlink:href="#myLongArrowDown" />
+            </g>
+            <g transform="translate(360, 680)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectWIP" />
+                    <text x="65" y="10" class="roadmap-text">Adversarial</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(360, 720)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectWIP" />
+                    <text x="65" y="10" class="roadmap-text">Uncertainty</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+            <g transform="translate(360, 780)">
+                <a xlink:href="">
+                    <use xlink:href="#myQuizzWIP" />
+                </a>
+            </g>
+
+
+            <g transform="translate(180, 760)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectWIP" />
+                    <text x="65" y="10" class="roadmap-text">Misc</text>
+                </a>
+                <use xlink:href="#myLeftArrow" />
+                <use xlink:href="#myFurtherArrow" />
+            </g>
+            <g transform="translate(0, 760)">
+                <a xlink:href="">
+                    <use xlink:href="#myRectWIP" />
+                    <text x="65" y="10" class="roadmap-text">Continual</text>
+                </a>
+                <use xlink:href="#mySmallArrowDown" />
+            </g>
+
+            <g transform="translate(0, 820)">
+                <a xlink:href="">
+                    <use xlink:href="#myQuizzWIP" />
                 </a>
             </g>
 
@@ -307,7 +367,7 @@
     .wrapper {
         padding: 0px 0px;
         --max-width: 1200px;
-        min-height: 1250px;
+        min-height: 1450px;
     }
 
     .wrapper text {
@@ -332,6 +392,11 @@
     .roadmap-quizz-circle {
         stroke: #e15f41;
         fill: none;
+    }
+
+    .roadmap-quizz-circle-wip {
+        stroke: black;
+        fill: lightgray;
     }
 
     .roadmap-quizz:hover .roadmap-quizz-circle {
