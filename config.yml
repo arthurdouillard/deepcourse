@@ -9,7 +9,7 @@ enableRobotsTXT: true
 
 publishDir: docs
 
-# googleAnalytics: UA-123-45
+googleAnalytics: UA-102629480-1
 
 minify:
     disableXML: true

@@ -1,4 +1,6 @@
-#!bash
+#!/bin/bash
+
+set -e
 
 hugo79
 git add docs/
