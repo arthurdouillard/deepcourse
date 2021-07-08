@@ -11,6 +11,17 @@
       <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
       
       <guid>/dnn/</guid>
+      <description>Before the lecture If you like videos, you can watch (as much as you can) the videos of 3Blue1Brown on Neural Networks:
+ The lecture The slides are here.
+After the lecture  Ruder&amp;rsquo;s overview of gradient-descent based optimizer (SGD, momentum, Adam, etc.) try re-deriving by yourself, on a sheet of paper, all the maths that were covered Overview of optimization from the famous &amp;ldquo;deeplearningbook&amp;rdquo; In-depth explications about momentum on distill.</description>
+    </item>
+    
+    <item>
+      <title>Deep Neural Network</title>
+      <link>/tmp1234/</link>
+      <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
+      
+      <guid>/tmp1234/</guid>
       <description>This lesson has more math than usual, but it&amp;rsquo;s important that we don&amp;rsquo;t shy away the theory behind deep learning. It will help us build a strong understanding of the algorithms we will code in later sections. If you feel overwhelmed by the math here, please see this review first.
 We are talking of neural networks, then what is a neuron? Certainly not the kind that is in your brain. While biologically inspired, artificial neurons are very different from the real counterpart, thus for now put aside any comparison with brains.</description>
     </item>
