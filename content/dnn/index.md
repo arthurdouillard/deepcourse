@@ -19,6 +19,8 @@ on Neural Networks:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aircAruvnKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
 
+- if you need to brush up your skills in linear algebra: [Hui's medium blog post](https://jonathan-hui.medium.com/machine-learning-linear-algebra-a5b1658f0151)
+
 # The lecture
 
 The slides are [here](/01_dnn.pdf).

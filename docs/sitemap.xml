@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/cnn/</loc>
+    <lastmod>1956-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/dnn/</loc>
     <lastmod>1956-06-18T00:00:00+00:00</lastmod>
   </url>
@@ -26,7 +31,15 @@
   </url>
   
   <url>
+    <loc>/quiz/dnn/</loc>
+  </url>
+  
+  <url>
     <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/quiz/</loc>
   </url>
   
   <url>
