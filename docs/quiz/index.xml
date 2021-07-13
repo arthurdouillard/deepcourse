@@ -12,7 +12,7 @@
       
       <guid>/quiz/dnn/</guid>
       <description>Click to reveal answer
-           $(document).ready(function () { launchQuiz( &#34;Introduction to Deep Learning&#34;, eval(&#34;[\n {Front: \&#34;\\\\(\\frac{1}{1 + e^{-x}}\\\\) What are the two passes done in a neural network?\&#34;, Back: \&#34;Forward and backward passes\&#34;},\n {Front: \&#34;What is the formula of a single neuron?\&#34;, Back: \&#34;\\\\(f(x) = w x + b\\\\)\&#34;},\n {Front: \&#34;What is the shape of \\\\(w\\\\) in a single neuron?</description>
+           $(document).ready(function () { launchQuiz( &#34;Introduction to Deep Learning&#34;, eval(&#34;[\n {Front: \&#34;What are the two passes done in a neural network?\&#34;, Back: \&#34;Forward and backward passes\&#34;},\n {Front: \&#34;What is the formula of a single neuron?\&#34;, Back: \&#34;\\\\(f(x) = w x + b\\\\)\&#34;},\n {Front: \&#34;What is the shape of \\\\(w\\\\) in a single neuron?\&#34;, Back: \&#34;</description>
     </item>
     
   </channel>

@@ -1,5 +1,6 @@
 var lastModifiedQuiz = 1;
 
+
 class Quiz {
     constructor(cards, title, fullPage, instanceId, randomOrder) {
         this.cards = cards;
@@ -154,7 +155,7 @@ class Quiz {
         } catch (error) {
             console.log("MathJax error (used for math formula rendering): " + error)
         }
-        console.log("disp", this.getElt("card-global-back").style.visibility)
+        //console.log("disp", this.getElt("card-global-back").style.visibility)
 
     }
 

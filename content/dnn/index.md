@@ -31,3 +31,5 @@ The slides are [here](/01_dnn.pdf).
 - try re-deriving by yourself, on a sheet of paper, all the maths that were covered
 - [Overview of optimization](https://www.deeplearningbook.org/contents/optimization.html) from the famous "deeplearningbook"
 - [In-depth explications about momentum](https://distill.pub/2017/momentum/) on distill.pub
+
+- [Neural network playground](https://playground.tensorflow.org/)
