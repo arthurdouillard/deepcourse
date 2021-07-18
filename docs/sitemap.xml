@@ -18,7 +18,22 @@
   </url>
   
   <url>
+    <loc>/generative/</loc>
+    <lastmod>1956-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/introduction/</loc>
+    <lastmod>1956-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/lessdata/</loc>
+    <lastmod>1956-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/multilabels/</loc>
     <lastmod>1956-06-18T00:00:00+00:00</lastmod>
   </url>
   

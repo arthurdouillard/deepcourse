@@ -148,12 +148,12 @@ if (!doNotTrack) {
                     </text>
                 </g>
 
-                <g id="myQuizzWIP" class="roadmap-quizz">
+                <g id="myQuizzWIP" class="roadmap-quizz-wip">
                     <circle cx="65" cy="0" r="20" class="roadmap-quizz-circle-wip" />
                     <text x="65" y="0" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7"
                         font-weight="900" style="text-transform:uppercase; letter-spacing: 1px"
                         dominant-baseline="middle" alignment-baseline="middle" text-anchor="middle"
-                        class="roadmap-quizz-text">Quiz
+                        class="roadmap-quizz-text-wip">Quiz
                     </text>
                 </g>
 
@@ -256,8 +256,8 @@ if (!doNotTrack) {
 
 
             <g transform="translate(180, 300)">
-                <a xlink:href="">
-                    <use xlink:href="#myRectWIP" />
+                <a xlink:href="./multiplelabels">
+                    <use xlink:href="#myRectCourse" />
                     <text x="65" y="10" class="roadmap-text">Multiple Objects</text>
                 </a>
                 <use xlink:href="#myRightArrow" />
@@ -285,7 +285,7 @@ if (!doNotTrack) {
 
             <g transform="translate(180, 400)">
                 <a xlink:href="">
-                    <use xlink:href="#myRectWIP" />
+                    <use xlink:href="#myRectCourse" />
                     <text x="65" y="10" class="roadmap-text">Less Data</text>
                 </a>
                 <use xlink:href="#myLeftArrow" />
@@ -308,7 +308,7 @@ if (!doNotTrack) {
             <g transform="translate(0, 480)">
                 <a xlink:href="">
                     <use xlink:href="#myRectWIP" />
-                    <text x="65" y="10" class="roadmap-text">Self-Supervised</text>
+                    <text x="65" y="10" class="roadmap-text">Semi-Supervised</text>
                 </a>
                 <use xlink:href="#mySmallArrowDown" />
             </g>
@@ -386,7 +386,7 @@ if (!doNotTrack) {
             <g transform="translate(180, 680)">
                 <a xlink:href="">
                     <use xlink:href="#myRectWIP" />
-                    <text x="65" y="10" class="roadmap-text">Robutness</text>
+                    <text x="65" y="10" class="roadmap-text">Robustness</text>
                 </a>
                 <use xlink:href="#myRightArrow" />
                 <use xlink:href="#myLongArrowDown" />
@@ -486,8 +486,8 @@ if (!doNotTrack) {
         fill: none;
     }
 
+    .roadmap-quizz-wip,
     .roadmap-quizz-circle-wip {
-        stroke: black;
         fill: lightgray;
     }
 
