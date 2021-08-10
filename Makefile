@@ -5,7 +5,7 @@ build:
 	/usr/local/bin/hugo-0.79.0/hugo
 	git add docs/
 	git add -u
-	git add static/code/
+	git add static/code/ static/notebooks
 	git commit -m "Update website"
 	git push origin master
 
