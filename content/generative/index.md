@@ -26,3 +26,5 @@ The slides are [here](/05_generative.pdf).
 - [Paper on why Style Transfer works better with VGG than ResNet](https://arxiv.org/abs/2104.05623)
 
 - [Lilian Weng on Normalizing Flows](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html)
+
+- [Generate yourself amazing artworks with VQGAN+CLIP [Google Colab]](https://colab.research.google.com/drive/1Foi0mCSE6NrW9oI3Fhni7158Krz4ZXdH)

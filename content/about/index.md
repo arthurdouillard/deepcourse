@@ -18,11 +18,7 @@ This course comprises several methodologies that I think are useful for students
 1. First head to the lesson (in yellow) and **learn** the new topics
 2. Each lesson is ended by a small quiz in order to assess that you didn't miss anything important
 3. Then practice by **coding** algorithms in the multiple exercise session (in orange)
-4. Do a larger quiz to see again if you understood well every aspect of the lesson by doing **active recall**
-
-And for the motivated, a fifth step:
-
-5. Download the [Anki](https://ankiweb.net/) associated, and be a lifelong-learner with **space-repetition**!
+4. Do a larger quiz to see again if you understood well every aspect of the lesson by doing **active recall** and **space-repetition** using [Anki](https://ankiweb.net/)!
 
 # What is Anki?
 
@@ -43,11 +39,11 @@ forgetting curve once we memorized the fact for the first time:
 Reviewing several times, at longer interval each time --if you do good, helps to avoid forgetting.
 
 Because the intervals are getting longer gradually, you won't feel overwhelmed under many cards.
-For example, I learned a bit more than 8000 cards in various subjects but I never have more than a hundred
+For example, I learned a bit more than 8000 cards in various subjects (ranging from math, CS, history, Chinese, geography, arts, etc.) but I rarely have more than a hundred
 cards to review per day, less than 20min.
 
 **Anki** is one of the most popular space-repetition software (SRS), mainly because of its
-vibrant community that shares [decks](https://ankiweb.net/shared/decks/) and [addons](https://ankiweb.net/shared/addons/). It is available on Windows, Mac, Linux, Web browsers, android, and iOS. Note that all but the latter are free.
+vibrant community that shares [decks](https://ankiweb.net/shared/decks/) and [addons](https://ankiweb.net/shared/addons/). It is available on Windows, Mac, Linux, Web browsers, android, and iOS. Note that all but the latter are free (although it's worth it).
 
 I cannot stress enough how space-repetition is amazing. Please try it.
 
@@ -60,3 +56,4 @@ I had many inspiration for this course, here are some:
     - This is the course Charles Ollion taught me at EPITA. He then task me to taught this course myself at EPITA. Thus this current course is in some part very similar to it.
 - [Sorbonne's RDFIA](https://rdfia.github.io/index.html): a course I'm teaching at Sorbonne. Most of the content was done by Thomas Robert and Rémi Cadene.
 - [Stanford's famous CS231n](http://cs231n.stanford.edu/)
+- [Quantum Country which motivated me to make my own course with space-repetition](https://quantum.country/)
