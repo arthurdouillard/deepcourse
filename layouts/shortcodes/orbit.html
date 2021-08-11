@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
+  </head>
+  <body>
+    <orbit-reviewarea color="pink">
+      <orbit-prompt
+        question="{{ .Get "quizid" }}"
+        answer="Orbit"
+      ></orbit-prompt>
+    </orbit-reviewarea>
+  </body>
+</html>
+
+
+<div class="{{ range .Params }}{{ . }} {{ end }}">

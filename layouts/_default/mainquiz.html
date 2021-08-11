@@ -1,0 +1,11 @@
+{{ partial "head.html" . }}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" charset="utf-8"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+{{ partial "header.html" . }}
+<section>
+    <h2 style="text-align: center">Quiz: {{ .Title }}</h2>
+    {{ .Content }}
+</section>
+{{ partial "footer.html" . }}
