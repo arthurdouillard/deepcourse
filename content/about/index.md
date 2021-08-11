@@ -16,9 +16,8 @@ at the French engineering school [EPITA](https://www.epita.fr/en/).
 This course comprises several methodologies that I think are useful for students:
 
 1. First head to the lesson (in yellow) and **learn** the new topics
-2. Each lesson is ended by a small quiz in order to assess that you didn't miss anything important
-3. Then practice by **coding** algorithms in the multiple exercise session (in orange)
-4. Do a larger quiz to see again if you understood well every aspect of the lesson by doing **active recall** and **space-repetition** using [Anki](https://ankiweb.net/)!
+2. Then practice by **coding** algorithms in the multiple exercise session (in orange)
+3. Do a larger quiz to see again if you understood well every aspect of the lesson by doing **active recall** and **space-repetition** using [Anki](https://ankiweb.net/)!
 
 # What is Anki?
 
