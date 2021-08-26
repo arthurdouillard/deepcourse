@@ -16,12 +16,12 @@ If you find a mistake (in the lesson, notebook, or quiz), please open an issue h
 
 - [X] Add all major lessons + notebooks + quiz
 - New architectures
-  - [ ] Lesson (transformer, new kind of mlp, involution, NAS, what else?)
+  - [X] Lesson (transformer, new kind of mlp, involution, NAS, what else?)
   - [X] Notebook transformer
   - [X] Notebook MLP-Mixer
-  - [ ] Quiz
+  - [X] Quiz
 - Robustness (uncertainty, adversarial attack)
-  - [ ] Lesson 
+  - [ ] Lesson
   - [ ] Notebook
   - [ ] Quiz
 - Continual Learning + domain generalization + out-of-distribution
