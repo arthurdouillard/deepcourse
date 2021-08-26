@@ -106,7 +106,7 @@ if (!doNotTrack) {
         <h2>Hi there 👋</h2>
     </header>
     <section class="entry-content">
-        <p><p>Welcome to the Deep Learning course for Vision.</p>
+        <p><p>Welcome to the Deep Learning course for Vision, from basics to State-of-the-Art.</p>
 <ul>
 <li>Learn by <strong>coding</strong> without <strong>shortcuts</strong>, and with <strong>space-repetition</strong>.</li>
 </ul>
@@ -384,10 +384,28 @@ if (!doNotTrack) {
 </script>
 
 <style>
-    .wrapper {
-        padding: 0px 0px;
-        --max-width: 1200px;
-        min-height: 1250px;
+    @media (max-width: 639px) {
+        .wrapper {
+            padding: 0px 0px;
+            --max-width: 1200px;
+            min-height: 475px;
+        }
+    }
+
+    @media (min-width: 639px) and (max-width: 1366px) {
+        .wrapper {
+            padding: 0px 0px;
+            --max-width: 1200px;
+            min-height: 1050px;
+        }
+    }
+
+    @media (min-width: 1365px) {
+        .wrapper {
+            padding: 0px 0px;
+            --max-width: 1200px;
+            min-height: 1250px;
+        }
     }
 
     .wrapper text {

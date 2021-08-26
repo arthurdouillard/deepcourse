@@ -61,7 +61,7 @@ params:
     homeInfoParams:
         Title: "Hi there \U0001F44B"
         Content: >
-            Welcome to the Deep Learning course for Vision.
+            Welcome to the Deep Learning course for Vision, from basics to State-of-the-Art.
 
             - Learn by **coding** without **shortcuts**, and with **space-repetition**.
 
