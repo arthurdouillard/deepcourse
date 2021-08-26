@@ -41,10 +41,10 @@ We are talking of neural networks, then what is a neuron? Certainly not the kind
     
     <item>
       <title>Generative Models</title>
-      <link>/archi/</link>
+      <link>/generative/</link>
       <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
       
-      <guid>/archi/</guid>
+      <guid>/generative/</guid>
       <description>The lecture The slides are here.
 After the lecture   Blog on auto-encoder, VAE, and beta-VAE
   Training tricks for GAN
@@ -97,10 +97,10 @@ Series of blog posts:
     
     <item>
       <title>Novel architectures and tricks to train them</title>
-      <link>/generative/</link>
+      <link>/archi/</link>
       <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
       
-      <guid>/generative/</guid>
+      <guid>/archi/</guid>
       <description>The lecture The slides are here.
 After the lecture  The Illustrated Transormer (NLP) Blog on transformers for Vision  </description>
     </item>
