@@ -16,7 +16,8 @@ hasQuiz: true
 
 # The lecture
 
-The slides are [here](/02_cnn.pdf).
+[![Front slide of the course](front.png)](/02_cnn.pdf)
+
 
 # After the lecture
 

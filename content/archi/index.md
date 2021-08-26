@@ -12,7 +12,8 @@ hasQuiz: true
 
 # The lecture
 
-The slides are [here](/06_archi.pdf).
+[![Front slide of the course](front.png)](/06_archi.pdf)
+
 
 # After the lecture
 

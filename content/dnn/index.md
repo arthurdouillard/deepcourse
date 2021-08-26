@@ -23,7 +23,7 @@ on Neural Networks:
 
 # The lecture
 
-The slides are [here](/01_dnn.pdf).
+[![Front slide of the course](front.png)](/01_dnn.pdf)
 
 # After the lecture
 

@@ -12,7 +12,8 @@ hasQuiz: true
 
 # The lecture
 
-The slides are [here](/05_generative.pdf).
+[![Front slide of the course](front.png)](/05_generative.pdf)
+
 
 # After the lecture
 

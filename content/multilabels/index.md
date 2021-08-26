@@ -12,7 +12,8 @@ hasQuiz: true
 
 # The lecture
 
-The slides are [here](/03_multiplelabels.pdf).
+[![Front slide of the course](front.png)](/03_multiplelabels.pdf)
+
 
 # After the lecture
 

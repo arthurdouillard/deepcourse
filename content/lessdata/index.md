@@ -12,7 +12,8 @@ hasQuiz: true
 
 # The lecture
 
-The slides are [here](/04_lessdata.pdf).
+[![Front slide of the course](front.png)](/04_lessdata.pdf)
+
 
 # After the lecture
 

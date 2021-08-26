@@ -11,10 +11,10 @@
       <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
       
       <guid>/cnn/</guid>
-      <description>Before the lecture  Quick glance at the wikipedia page of convolution kernels  The lecture The slides are here.
+      <description>Before the lecture  Quick glance at the wikipedia page of convolution kernels  The lecture 
 After the lecture Emblematic papers about new architectures to read:
  VGG, Simonyan and Zisserman 2014 Inception, Szegedy et al. CVPR 2015 ResNet, He et al. ECCV 2016 EfficientNet, Tan et al. ICML 2019  Other papers worth reading:
- Dropout, Srivastava et al. JMLR 2014 Batch Normalization, Ioffe et al.</description>
+ Dropout, Srivastava et al. JMLR 2014 Batch Normalization, Ioffe et al. ICML 2015  Some blog posts:</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@ After the lecture Emblematic papers about new architectures to read:
       
       <guid>/dnn/</guid>
       <description>Before the lecture If you like videos, you can watch (as much as you can) the videos of 3Blue1Brown on Neural Networks:
-  if you need to brush up your skills in linear algebra: Hui&amp;rsquo;s medium blog post  The lecture The slides are here.
+  if you need to brush up your skills in linear algebra: Hui&amp;rsquo;s medium blog post  The lecture 
 After the lecture   Ruder&amp;rsquo;s overview of gradient-descent based optimizer (SGD, momentum, Adam, etc.)
   try re-deriving by yourself, on a sheet of paper, all the maths that were covered</description>
     </item>
@@ -45,7 +45,7 @@ We are talking of neural networks, then what is a neuron? Certainly not the kind
       <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
       
       <guid>/generative/</guid>
-      <description>The lecture The slides are here.
+      <description>The lecture 
 After the lecture   Blog on auto-encoder, VAE, and beta-VAE
   Training tricks for GAN
   Stanford&amp;rsquo;s course on generative models
@@ -73,7 +73,7 @@ This course will teach you the fundamentals of Deep Learning applied to images. 
       <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
       
       <guid>/lessdata/</guid>
-      <description>The lecture The slides are here.
+      <description>The lecture 
 After the lecture Emblematic papers about new architectures to read:
 Blog posts:
  On the Triplet Network Self-Supervised Learning Twitter thread on recent advances in self-supervision  Papers on few-shot learning:
@@ -88,7 +88,7 @@ Blog posts:
       <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
       
       <guid>/multilabels/</guid>
-      <description>The lecture The slides are here.
+      <description>The lecture 
 After the lecture Emblematic papers about new architectures to read:
 Series of blog posts:
  Selective Search Fast and Faster R-CNN  Papers:
@@ -101,7 +101,7 @@ Series of blog posts:
       <pubDate>Mon, 18 Jun 1956 00:00:00 +0000</pubDate>
       
       <guid>/archi/</guid>
-      <description>The lecture The slides are here.
+      <description>The lecture 
 After the lecture  The Illustrated Transormer (NLP) Blog on transformers for Vision  </description>
     </item>
     
