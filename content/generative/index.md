@@ -19,6 +19,8 @@ hasQuiz: true
 
 - [Blog on auto-encoder, VAE, and beta-VAE](https://lilianweng.github.io/lil-log/2018/08/12/from-autoencoder-to-beta-vae.html)
 - [Training tricks for GAN](https://beckham.nz/2021/06/28/training-gans.html)
+- [Youtube video on the demonstration of VAE](https://www.youtube.com/watch?v=uaaqyVS9-rM&t=1182s)
+
 - [Stanford's course on generative models](https://deepgenerativemodels.github.io)
 
 - [Tutorial on Style Transfer](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
