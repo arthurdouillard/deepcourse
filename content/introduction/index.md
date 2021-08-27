@@ -13,9 +13,9 @@ hasQuiz: true
 Welcome to this course on Deep Learning for Computer Vision!
 
 This course will teach you the fundamentals of Deep Learning applied to images. Each topic
-will be covered under three different type of materials:
+will be covered under three different types of materials:
 
-- **Lessons**, such as this one, accompanied with slides and small quizzes between chapters;
+- **Lessons**, such as this one, accompanied by slides and small quizzes between chapters;
 - **Practices**, with Google Colab notebooks where we will code actual algorithms;
 - And, **quizzes**, where you will test your recall on the important notions.
 
