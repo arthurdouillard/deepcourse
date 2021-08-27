@@ -19,3 +19,4 @@ hasQuiz: true
 
 - [The Illustrated Transormer (NLP)](https://jalammar.github.io/illustrated-transformer/)
 - [Blog on transformers for Vision](https://arthurdouillard.com/post/visual_transformers/)
+- [Suuuuuuuper long list of the recent papers for transformers for Vision](https://github.com/DirtyHarryLYL/Transformer-in-Vision)
