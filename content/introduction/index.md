@@ -132,7 +132,7 @@ Now, let's check with a quick quiz our understanding of this chapter:
 {{< quiz cards=`[
     {Front: "Are artificial neural networks recent?", Back: "No! It dates back from 1958 and Rosenblatt's Perceptron"},
     {Front: "Is artificial intelligence only Deep Learning?", Back: "No it's only a sub-domain"},
-    {Front: "When learning of Neural Network, which part of it is modified?", Back: "Its parameters"},
+    {Front: "During the learning of a Neural Network, which part of it is modified?", Back: "Its parameters"},
     {Front: "How do we call the function that penalize the Neural Network when it makes mistakes?", Back: "Loss function"},
     {Front: "What is the main reason why neural networks didn't work in the XXth century?", Back: "Because of a lack of <b>computational power</b>"},
     {Front: "What programming language is mainly used in Deep Learning?", Back: "Python"},
