@@ -105,3 +105,6 @@ services:
         disableInlineCSS: true
     twitter:
         disableInlineCSS: true
+
+
+disqusShortname: arthurdouillard

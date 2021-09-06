@@ -64,10 +64,10 @@
     {{- end }}
   </footer>
 
-  {{- if and ($.Site.Params.comments) (ne .Params.comments false) }}
+  <br />
+  {{- if and (.Site.DisqusShortname) (ne .Params.comments false) }}
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
 
 {{- end }}{{/* end main */}}
-
