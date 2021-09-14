@@ -11,6 +11,6 @@ class PatchEmbed(nn.Module):
     # Shape is now B, N, D
     # With B the batch size
     # With N the number of tokens (N = H * W)
-    # With C the embedding dimension
+    # With D the embedding dimension (previously C the number of channels)
 
     return x
