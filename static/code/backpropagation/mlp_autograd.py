@@ -18,7 +18,7 @@ class MLP:
     def fit(self, inputs, targets, train=True):
         logits, *outputs = self.forward(inputs)
         probs = softmax(logits)
-        loss = cross_entropy(probs, torch.eye(10)[targets]).mean()
+        loss = cross_entropy(probs, torch.eye(10)[targets]).sum()
         if train:
             self.backward(inputs, probs, targets, loss, *outputs)
         return loss
