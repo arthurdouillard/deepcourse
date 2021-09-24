@@ -34,7 +34,7 @@ class MLP:
 
         grad_h = torch.mm(grad_logits, self.w_output.T)
         grad_htilde = grad_h * grad_tanh(h)
-        grad_wh = torch.mm(inputs.T, grad_h) / batch_size
+        grad_wh = torch.mm(inputs.T, grad_htilde) / batch_size
         grad_bh = torch.sum(grad_h, dim=0) / batch_size
 
         self.w_output = self.w_output - self.learning_rate * grad_wo
