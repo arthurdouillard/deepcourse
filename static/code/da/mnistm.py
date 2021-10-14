@@ -2,8 +2,8 @@ import pickle as pkl
 import tarfile
 import tarfile
 from urllib.request import urlretrieve
+import os
 
-from urllib.request import urlretrieve
 
 import numpy as np
 import skimage
