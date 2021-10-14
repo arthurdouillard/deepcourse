@@ -7,6 +7,7 @@ import os
 
 import numpy as np
 import skimage
+import skimage.io
 import skimage.transform
 import torchvision
 
