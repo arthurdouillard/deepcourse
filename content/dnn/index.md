@@ -33,3 +33,5 @@ on Neural Networks:
 - [In-depth explications about momentum](https://distill.pub/2017/momentum/) on distill.pub
 
 - [Neural network playground](https://playground.tensorflow.org/)
+
+- [Karpathy's "Yes, you should understand backprop"](https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b)
