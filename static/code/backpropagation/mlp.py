@@ -18,7 +18,7 @@ class MLP:
 
     def fit(self, inputs, targets, train=True):
         outputs = self.forward(inputs)
-        probs = softmax(outputs[-1])
+        probs = outputs[-1]
         if train:
             self.backward(inputs, targets, *outputs)
 
